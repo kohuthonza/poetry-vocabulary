@@ -6,24 +6,24 @@ maple
 loom
 obviate parade
 Visuals:
-Gentian
-Maple
+gentian
+maple
 Moods:
 
 1,1,2 - A brief, but patient illness -
 Words:
 bobolink
 Visuals:
-Bobolink
+bobolink
 Moods:
-Devotional
-Jolly
+devotional
+jolly
 
 1,1,3 - In the name of the Bee -
 Words:
 Visuals:
 Moods:
-Devotional
+devotional
 
 1,1,4 - Frequently the woods are pink -
 Words:
@@ -40,7 +40,7 @@ sepal, petal, and a thorn
 caper in the trees
 Visuals:
 Moods:
-Jolly
+jolly
 
 1,1,6 - Distrustful of the Gentian -
 Words:
@@ -48,14 +48,14 @@ gentian
 the fluttering of her fringes chid my perfidy
 sleet
 Visuals:
-Gentian
+gentian
 Moods:
 
 1,1,7 - Flees so the phantom meadow
 Words:
 Visuals:
 Moods:
-Transcendental
+transcendental
 
 1,1,8 - We lose - because we win -
 Words:
@@ -82,9 +82,9 @@ daisy
 columbine
 crocus
 Visuals:
-Daisy
-Columbine
-Crocus
+daisy
+columbine
+crocus
 Moods:
 
 1,1,11 - To him who keeps an Orchis' heart -
@@ -92,7 +92,7 @@ Words:
 orchis' heart
 swamps
 Visuals:
-Orchis
+orchis
 Moods:
 
 1,2,1 - I had a guinea golden -
@@ -108,10 +108,10 @@ it wandered from the same
 mournful ditty
 repentance solemn
 Visuals:
-Robin
-Pleiad
+robin
+pleiad
 Moods:
-Philosophical
+philosophical
 
 1,2,2 - There is a morn by men unseen -
 Words:
@@ -123,7 +123,7 @@ cups of chrysolite
 revel
 dells
 Visuals:
-Chrysolite
+chrysolite
 Moods:
 
 1,2,3 - As if I asked a common alms -
@@ -131,8 +131,8 @@ Words:
 common alms
 Visuals:
 Moods:
-Philosophical
-Transcendental
+philosophical
+transcendental
 Sent:
 TWH
 
@@ -153,9 +153,9 @@ cantons
 my classics vail their faces
 solemn abbeys
 Visuals:
-Crocus
+crocus
 Moods:
-Transcendental
+transcendental
 Sent:
 SD
 
@@ -163,7 +163,7 @@ SD
 Words:
 clover
 Visuals:
-Clover
+clover
 Moods:
 
 1,3,3 - Morns like these - we parted -
@@ -172,9 +172,9 @@ fluttering
 never did she lisp it
 linnet
 Visuals:
-Linnet
+linnet
 Moods:
-Erotic
+erotic
 Sent:
 Ns
 SD
@@ -186,17 +186,16 @@ so tiptoed many a slipper to paradise away
 oozed
 tripping
 Visuals:
-Daisy
+daisy
 Moods:
 
 1,3,5 - If those I loved were lost
 Words:
 crier's voice
 Ghent
-Daisy would impel me
+daisy would impel me
 Visuals:
-Ghent
-Daisy
+daisy
 Moods:
 
 1,4,1 - Adrift! A little boat adrift!
@@ -208,7 +207,7 @@ retrimmed its masts
 redecked its sails
 exultant
 Visuals:
-Cole
+cole
 Moods:
 
 1,4,2 - Summer for thee, grant I may be
@@ -218,17 +217,17 @@ oriole
 row my blossoms o'er
 anemone
 Visuals:
-Whippowil
-Oriole
-Anemone
+whippowil
+oriole
+anemone
 Moods:
 
 1,4,3 - When Roses cease to bloom, Sir,
 Words:
-Violets
+violets
 auburn
 Visuals:
-Violet
+violet
 Moods:
 
 1,4,4 - Oh if remembering were forgetting -
@@ -244,7 +243,7 @@ Words:
 where no breakers roar
 the anchors fast
 Visuals:
-Cole
+cole
 Moods:
 Sent:
 SD ("Write! Comrade, write!")
@@ -257,8 +256,8 @@ rare degree of soul or sword
 equity
 ordained
 Visuals:
-Garlands
-Laurels
+garlands
+laurel
 Moods:
 
 1,4,7 - Nobody knows this little Rose -
@@ -296,10 +295,10 @@ capuchin
 lark
 lapwing
 Visuals:
-Opal
-Capuchin
-Lark
-Lapwing
+opal
+capuchin
+lark
+lapwing
 Moods:
 Sent:
 SD
@@ -311,7 +310,7 @@ I did resign the prig
 stately
 Visuals:
 Moods:
-Jolly
+jolly
 
 2,1,5 - Before the ice is in the pools -
 Words:
@@ -373,7 +372,7 @@ SD
 Words:
 bobolink
 Visuals:
-Bobolink
+bobolink
 Moods:
 Sent: SD (not certain)
 
@@ -384,9 +383,9 @@ trifle
 stately
 acorn
 Visuals:
-Acorn
+acorn
 Moods:
-Advising
+advising
 
 2,3,3 - I've got an arrow here
 Words:
@@ -405,9 +404,9 @@ bore away
 hemlock
 oak
 Visuals:
-Burs
-Hemlock
-Oak
+burs
+hemlock
+oak
 Moods:
 
 2,3,5 - A Day! Help! Help!
@@ -458,8 +457,8 @@ plight
 daisy
 bobolink
 Visuals:
-Daisy
-Bobolink
+daisy
+bobolink
 Moods:
 
 2,4,4 - Heart! We will forget him!
@@ -476,7 +475,7 @@ bestirs her puzzled wings
 flings
 thrice to the floating casement
 Visuals:
-Dove
+dove
 Moods:
 
 2,4,6 - Baffled for just day or two
@@ -493,9 +492,9 @@ Bosom
 Meek apparreled thing
 Visuals:
 Moods:
-Philosophical
-Spring
-Transcendental
+philosophical
+spring
+transcendental
 Sent:
 SD
 
@@ -513,9 +512,9 @@ Soft sauntered thro' the village
 Unsuspected Violets
 Striving fingers
 Visuals:
-Violet
+violet
 Moods:
-Jolly
+jolly
 
 3,1,4 - So bashful when I spied her!
 Words:
@@ -526,9 +525,9 @@ Dingle
 Dell
 Visuals:
 Moods:
-Erotic
-Jolly
-Secretive
+erotic
+jolly
+secretive
 
 3,1,5 - My friend must be a Bird -
 Words:
@@ -549,9 +548,9 @@ Beguiling
 Hands bustled at the moorings
 Daisy
 Visuals:
-Daisy
+daisy
 Moods:
-Transcendental
+transcendental
 
 3,2,1 - Angels, in the early morning
 Words:
@@ -566,7 +565,7 @@ Nosegays
 Moor
 Errand
 Visuals:
-Nosegays
+nosegays
 Moods:
 
 3,2,3 - Sexton! My Master's sleeping here.
@@ -582,7 +581,7 @@ Gust
 Eloquent
 Visuals:
 Moods:
-Transcendental
+transcendental
 
 3,2,5 - One dignity delays for all -
 Words:
@@ -593,7 +592,7 @@ Ermine
 Escutscheon
 Visuals:
 Moods:
-Death
+death
 
 3,2,6 - As by the dead we love to sit -
 Words:
@@ -602,7 +601,7 @@ Fading ration
 Penurious
 Visuals:
 Moods:
-Death
+death
 Sent:
 EH
 
@@ -613,15 +612,15 @@ Elm
 Pensive
 Punctual
 Visuals:
-Elm
+elm
 Moods:
-Spring
+spring
 
 3,2,8 - I hide myself within my flower
 Words:
 Visuals:
 Moods:
-Erotic
+erotic
 Notes:
 With pinholes as if for sending with flower
 
@@ -657,19 +656,19 @@ Lisp
 Nor heedless by the way
 Visuals:
 Moods:
-Death
-Secretive
+death
+secretive
 
 3,3,4 - I often passed the Village
 Words:
 Dial
 Daisies
 Visuals:
-Daisy
-Flutter down
-Enfold
+daisy
+flutter down
+enfold
 Moods:
-Death
+death
 Sent:
 SD (not certain)
 Notes:
@@ -682,9 +681,9 @@ Plumer
 Maple
 Lest I sh'd be old fashioned
 Visuals:
-Maple
+maple
 Moods:
-Autumn
+autumn
 Sent:
 SD (with a flower and ribbon)
 
@@ -697,8 +696,8 @@ Errand
 Out upon the Bay
 Visuals:
 Moods:
-Philosophical
-Transcendental
+philosophical
+transcendental
 
 3,4,3 - Taken from men - this morning -
 Words:
@@ -709,7 +708,7 @@ Border star
 Courtiers quaint
 Visuals:
 Moods:
-Death
+death
 
 3,4,4 - Sleep is supposed to be
 Words:
@@ -736,9 +735,9 @@ Serene
 Sprightly
 Conduct
 Visuals:
-Daisy
+daisy
 Moods:
-Death
+death
 
 3,4,6 - By Chivalries as tiny,
 Words:
@@ -753,11 +752,11 @@ Bonnet
 Clover
 Why, I will lend until just then, but not an hour more
 Visuals:
-Daffodil
-Clover
-Bonnet
+daffodil
+clover
+bonnet
 Moods:
-Jolly
+jolly
 
 4,1,2 - Water, is taught by thirst.
 Words:
@@ -766,7 +765,7 @@ Throe
 Memorial mold
 Visuals:
 Moods:
-Philosophical
+philosophical
 
 4,1,3 - Have you got a Brook in your little heart,
 Words:
@@ -775,7 +774,7 @@ Blushing birds
 Brook
 Visuals:
 Moods:
-Philosophical
+philosophical
 
 4,1,4 - Flowers - Well - if anybody
 Words:
@@ -787,9 +786,9 @@ A simple breast like mine
 Pathos
 Aesthetics
 Visuals:
-Daisy
+daisy
 Moods:
-Philosophical
+philosophical
 
 4,1,5 - Pigmy seraphs - gone astray -
 Words:
@@ -802,10 +801,10 @@ Never such an ambuscade as of briar and leaf displayed for my little damask maid
 Earl's distinguished face
 Subdue
 Visuals:
-Emerald
-Damask
+emerald
+damask
 Moods:
-Philosophical
+philosophical
 Sent:
 SD
 
@@ -823,7 +822,7 @@ Chirping brook
 Set bleeding feet to minuets
 Bugle
 Visuals:
-Bobolink
+bobolink
 Moods:
 Sent:
 Catherine Scott Turner (Anthon) (with the title "Whistling under my window-")
@@ -849,9 +848,9 @@ Fern odors
 Furtive look
 Annual reply
 Visuals:
-Fern
+fern
 Moods:
-Transcendental
+transcendental
 
 4,2,4 - Some, too fragile for winter winds
 Words:
@@ -861,9 +860,9 @@ Covert
 Sparrows
 Fold
 Visuals:
-Sparrow
+sparrow
 Moods:
-Death
+death
 
 4,3,1 - Whose are the little beds - I asked
 Words:
@@ -884,20 +883,20 @@ The crocus stir her lids
 Rhodora's cheek
 Reverent
 Visuals:
-Daisy
-Leontodon
-Iris
-Aster
-Anemone
-Bell
-Bartsia
-Daffodil
-Epigea
-Crocus
-Rhodora
+daisy
+leontodon
+iris
+aster
+anemone
+bell
+bartsia
+daffodil
+epigea
+crocus
+rhodora
 Moods:
-Botanical
-Jolly
+botanical
+jolly
 
 4,3,2 - For every bird a nest -
 Words:
@@ -908,14 +907,14 @@ Twine
 Lark
 Throng
 Visuals:
-Lark
+lark
 Moods:
 
 4,3,3 - "They have not chosen me" - he said -
 Words:
 Visuals:
 Moods:
-Philosophical
+philosophical
 Sent:
 Mary Bowles
 
@@ -927,9 +926,9 @@ Daffodils
 Timid bonnet
 Courtiers
 Visuals:
-Daffodil
+daffodil
 Moods:
-Death
+death
 
 4,4,2 - We should not mind so small a flower
 Words:
@@ -941,9 +940,9 @@ Whoso
 Bobolinks
 Dandelions
 Visuals:
-Carnation
-Bobolink
-Dandelion
+carnation
+bobolink
+dandelion
 Moods:
 Sent:
 SD
@@ -985,7 +984,7 @@ Words:
 Tint cashmere
 Easel
 Visuals:
-Easel
+easel
 Moods:
 
 5,1,3 - Success is counted sweetest
@@ -995,7 +994,7 @@ Purple host
 Burst
 Visuals:
 Moods:
-Philosophical
+philosophical
 Sent:
 SD
 THW
@@ -1015,7 +1014,7 @@ Nimble
 Placid
 Visuals:
 Moods:
-Devotional
+devotional
 
 5,1,6 - Ambition cannot find him -
 Words:
@@ -1038,7 +1037,7 @@ Intricate
 Saucy
 Visuals:
 Moods:
-Devotional
+devotional
 
 5,2,2 - South winds jostle them -
 Words:
@@ -1061,7 +1060,7 @@ Baffled fingers
 Perplexity
 Visuals:
 Moods:
-Philosophical, Transcendental
+philosophical, transcendental
 Sent:
 SD
 
@@ -1071,7 +1070,7 @@ Ruddy fires on the hearth
 Brimming tankards flow
 Visuals:
 Moods:
-Death
+death
 
 5,2,5 - I had some things that I called mine -
 Words:
@@ -1081,7 +1080,7 @@ Pedigree
 Retain
 Visuals:
 Moods:
-Devotional, Jolly
+devotional, jolly
 
 5,2,6 - In rags mysterious as these
 Words:
@@ -1096,7 +1095,7 @@ Moods:
 Words:
 Visuals:
 Moods:
-Jolly
+jolly
 
 5,3,1 - "Arcturus" is his other name -
 Words:
@@ -1110,9 +1109,9 @@ Frisk about
 Whatever prank betides
 Stile
 Visuals:
-Clover
+clover
 Moods:
-Philosophical, Jolly
+philosophical, jolly
 
 5,3,2 - Talk with prudence to a Beggar
 Words:
@@ -1129,7 +1128,7 @@ Shroud of red
 Peacock
 Presumes
 Visuals:
-Peacock
+peacock
 Moods:
 
 5,3,4 - As Watchers hang upon the East -
@@ -1140,7 +1139,7 @@ Beguiles
 Amethyst
 Flagons
 Visuals:
-Amethyst
+amethyst
 Moods:
 Sent:
 SD
@@ -1152,7 +1151,7 @@ Sparrow
 Sweet of twigs and twine
 Perennial nest
 Visuals:
-Sparrow
+sparrow
 Moods:
 Words:
 Sent:
@@ -1178,7 +1177,7 @@ Words:
 Denominated
 Visuals:
 Moods:
-Death
+death
 Sent:
 SD
 
@@ -1189,9 +1188,9 @@ Kirtle
 Daisy
 Rill
 Visuals:
-Bonnet
-Kirtle
-Daisy
+bonnet
+kirtle
+daisy
 Moods:
 Sent:
 SD
@@ -1207,10 +1206,10 @@ Bonnets
 Firmament
 Meek at whose everlasting feet a myriad Daisy play
 Visuals:
-Bonnet
-Daisy
+bonnet
+daisy
 Moods:
-Transcendental
+transcendental
 
 5,4,6 - For each extatic instant
 Words:

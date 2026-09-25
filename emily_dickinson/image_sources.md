@@ -1,20 +1,20 @@
 # Emily Dickinson visual vocabulary
 
-120 JPEG images across 24 visual sets. The headerless CSV uses Image basename in column 10; blank fields mean no resolved visual. Fascicle 1 retains its 141 vocabulary records.
+135 JPEG images across 27 visual sets, saved directly in local Anki media. Anki stores the stable basename in its Visual field. Source keywords define new basenames; their matching vocabulary entries determine the note attachments.
 
 ## Files and future additions
 
-All 24 sets are resolved, with five files per set numbered 0–4. Keep the `ed-` prefix and existing basenames stable. Reuse a set for the same whole term and meaning, including the listed aliases. Later images use the next unused number, such as `ed-gentian-5.jpg`; the CSV basename stays unchanged and the Anki renderer must support the available count.
+All 27 sets are resolved, with five files per set numbered 0–4. Keep the `ed-` prefix and existing basenames stable. Reuse a set for the same whole term and meaning, including the listed aliases. Later images use the next unused number, such as `ed-gentian-5.jpg`; the Anki Visual basename stays unchanged and the Anki renderer must support the available count.
 
 All files are actual JPEGs, converted at quality 95 without cropping, resizing or upscaling. Dimensions describe the downloaded website rendition, not an unavailable master original. Transparency was composited onto white where needed. All images were decoded and visually reviewed during collection; credits and watermarks were retained. Only compact temporary previews were resized. The Fascicle 1 prefix update changed filenames without altering image content.
 
 ## Representative subjects
 
-These are vocabulary illustrations, not claims to identify the exact species Dickinson intended. New England plants and birds were favoured where appropriate. Crocuses represent garden flowers; daisy and clover include introduced plants familiar in northeastern fields. Linnet follows the Eurasian bird meaning in the CSV. Laurel follows the bay-laurel and victory-wreath sense rather than mountain laurel. Garlands show real flower arrangements from several contexts.
+These are vocabulary illustrations, not claims to identify the exact species Dickinson intended. New England plants and birds were favoured where appropriate. Crocuses represent garden flowers; daisy and clover include introduced plants familiar in northeastern fields. Linnet follows the Eurasian bird meaning in the vocabulary. Laurel follows the bay-laurel and victory-wreath sense rather than mountain laurel. Garlands show real flower arrangements from several contexts.
 
 Identification notes: capuchin uses the historical garment sense, with distinct views of two Met objects. Lark is represented by the horned lark and dove by the mourning dove, without claiming either is the exact bird intended in the poems. Hemlock uses the eastern hemlock tree sense. Burs shows burdock seed heads.
 
-| English Word | CSV basename | Representative subject | Aliases (same meaning only) |
+| Visual keyword | Image basename | Representative subject | Aliases / matching vocabulary |
 |---|---|---|---|
 | gentian | ed-gentian | Greater fringed gentian (Gentianopsis crinita) | gentians |
 | maple | ed-maple | Red maple (Acer rubrum) | maples |
@@ -41,9 +41,13 @@ Identification notes: capuchin uses the historical garment sense, with distinct 
 | lark | ed-lark | Horned lark (Eremophila alpestris), a representative New England lark | larks |
 | dove | ed-dove | Mourning dove (Zenaida macroura), representative vocabulary illustration | doves |
 
+| robin | ed-robin | American robin (Turdus migratorius) | crimson robin |
+| pleiad | ed-pleiad | Pleiades stars: ground-based optical, Cassini visible-light, Spitzer and WISE infrared views | Pleiad |
+| violet | ed-violet | Common blue violet (Viola sororia), including a white-flowered form | violets |
+
 ## Source index
 
-Retrieved 10 September 2026. Public accessibility does not imply a reuse licence. Individual credits and licences were not recorded in the original index; consult the retained source links. All listed filenames have been saved. Fascicle 2 source rows were retrieved 11 September 2026 and include available credits.
+Public accessibility does not imply a reuse licence. Source links and available credits are retained below. Individual credits/licences were not recorded for some historical images; consult their source pages. All listed filenames are saved in local Anki media. No ZIPs or batch logs are maintained.
 
 Access note: Birdfact and one Les-oiseaux.com image URL returned HTTP 403 and were replaced with accessible alternatives. Cornell All About Birds gallery pages and the tested Wikimedia Commons API endpoint also returned HTTP 403. No failed candidates are included.
 
@@ -169,9 +173,18 @@ Access note: Birdfact and one Les-oiseaux.com image URL returned HTTP 403 and we
 | ed-dove-3.jpg | 1200 × 838 | JPEG | [source](https://www.audubon.org/field-guide/bird/mourning-dove) | [image](https://media.audubon.org/nas_birdapi/a1_5716_2_mourning-dove_tom_warren_adult.jpg?auto=webp&disable=upscale&fit=bounds&quality=90&width=1200) | Tom Warren / Audubon Photography Awards; reuse licence not established |
 | ed-dove-4.jpg | 1200 × 797 | JPEG | [source](https://www.audubon.org/field-guide/bird/mourning-dove) | [image](https://media.audubon.org/nas_birdapi/mourning-dove_003_juvenile_fall_donkasak_flickrcc-by-sa-2.0_juvenile.jpg?auto=webp&disable=upscale&fit=bounds&quality=90&width=1200) | Don Kasak / Flickr / CC BY-SA 2.0 |
 | ed-lapwing-1.jpg | 1200 × 805 | JPEG | [source](https://www.audubon.org/field-guide/bird/northern-lapwing) | [image](https://media.audubon.org/nas_birdapi/northern-lapwing_005_spring_sweden_stefanberndtsson_flickrcc-by-2.0_breeding-adult-female.jpg?auto=webp&disable=upscale&fit=bounds&quality=90&width=1200) | Stefan Berndtsson / Flickr / CC BY 2.0 |
-
-## Batch log
-
-2026-09-10 — Fascicle 1: 15 new resolved sets, 75 new images; 0 reused sets and 0 unresolved terms. Each set contains files 0–4. The later addition of fascicle brought the CSV to 141 records (116 standard, 25 excerpts), with 580 examples. On 2026-09-11, the ed- prefix was added to all 75 filenames and 15 CSV basenames, and this index was aligned with the Wordsworth format. No additional images were collected. The 15 basenames each map to one CSV record; the remaining 126 image fields are blank.
-
-2026-09-11 — Fascicle 2 complete: 9 new resolved sets (ed-opal, ed-capuchin, ed-lark, ed-lapwing, ed-acorn, ed-burs, ed-hemlock, ed-oak, ed-dove), 45 new JPEGs, each basename numbered 0–4. Reused ed-bobolink and ed-daisy. No unresolved terms. The ZIP contains only these 45 new files. CSV: 77 submitted records + 35 extracted records − 3 duplicate merges = 109 rows (94 standard, 15 excerpts), 470 examples, 11 populated image basenames. Repeated epaulettes, stately, and bobolink were merged at their earliest positions.
+| ed-robin-0.jpg | 1677 × 944 | JPEG | [source](https://www.audubon.org/field-guide/bird/american-robin) | [image](https://media.audubon.org/nas_birdapi_hero/web_h_americanrobin_03-16-2016-110-adult-male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale) | Adult Male. Photo: Brian Kushner; reuse licence not established |
+| ed-robin-1.jpg | 1416 × 944 | JPEG | [source](https://www.audubon.org/field-guide/bird/american-robin) | [image](https://media.audubon.org/nas_birdapi/americanrobin_01-12-2016-015-adult_female.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale) | Adult female. Photo: Brain Kushner; reuse licence not established |
+| ed-robin-2.jpg | 830 × 944 | JPEG | [source](https://www.audubon.org/field-guide/bird/american-robin) | [image](https://media.audubon.org/nas_birdapi/a1_5558_2_american_robin_joseph_mahoney-adult.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale) | Adult. Photo: Joseph Mahoney/Audubon Photography Awards; reuse licence not established |
+| ed-robin-3.jpg | 629 × 944 | JPEG | [source](https://www.audubon.org/field-guide/bird/american-robin) | [image](https://media.audubon.org/nas_birdapi/americanrobin_03-11-2014-029-adult_male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale) | Adult male. Photo: Brian Kushner; reuse licence not established |
+| ed-robin-4.jpg | 1180 × 944 | JPEG | [source](https://www.audubon.org/field-guide/bird/american-robin) | [image](https://media.audubon.org/nas_birdapi/aud_gbbc-2016_american-robin_34503_kk_nj_photo-shayna-marchese-adult_male.jpg?height=944&auto=webp&quality=90&fit=bounds&disable=upscale) | Adult male. Photo: Shayna Marchese/Great Backyard Bird Count; reuse licence not established |
+| ed-violet-0.jpg | 450 × 600 | JPEG | [source](https://www.minnesotawildflowers.info/flower/common-blue-violet) | [image](https://www.minnesotawildflowers.info/udata/r9ndp23q/pd/viola-sororia-12.jpg) | Peter M. Dziuk / Minnesota Wildflowers; reuse licence not established |
+| ed-violet-1.jpg | 600 × 450 | JPEG | [source](https://www.minnesotawildflowers.info/flower/common-blue-violet) | [image](https://www.minnesotawildflowers.info/udata/r9ndp23q/blue/common-blue-violet_0516_112210.jpg) | K. Chayka / Minnesota Wildflowers; reuse licence not established |
+| ed-violet-2.jpg | 600 × 450 | JPEG | [source](https://www.minnesotawildflowers.info/flower/common-blue-violet) | [image](https://www.minnesotawildflowers.info/udata/r9ndp23q/pd/viola-sororia-05-8.jpg) | Peter M. Dziuk / Minnesota Wildflowers; reuse licence not established |
+| ed-violet-3.jpg | 450 × 600 | JPEG | [source](https://www.minnesotawildflowers.info/flower/common-blue-violet) | [image](https://www.minnesotawildflowers.info/udata/r9ndp23q/blue/common-blue-violet_0518_165006.jpg) | K. Chayka / Minnesota Wildflowers; reuse licence not established |
+| ed-violet-4.jpg | 600 × 450 | JPEG | [source](https://www.minnesotawildflowers.info/flower/common-blue-violet) | [image](https://www.minnesotawildflowers.info/udata/r9ndp23q/pd/viola-sororia-4.jpg) | Peter M. Dziuk / Minnesota Wildflowers; reuse licence not established |
+| ed-pleiad-0.jpg | 1574 × 1377 | JPEG | [source](https://www.eso.org/public/images/b11/) | [image](https://cdn.eso.org/images/large/b11.jpg) | ESO/S. Brunier; see source image-use terms |
+| ed-pleiad-1.jpg | 3365 × 2234 | JPEG | [source](https://iauarchive.eso.org/public/images/detail/ann22042ab/) | [image](https://iauarchive.eso.org/static/archives/images/large/ann22042ab.jpg) | Mohamed Usama/IAU OAE; see source image-use terms |
+| ed-pleiad-2.jpg | 687 × 559 | JPEG | [source](https://images.nasa.gov/details/PIA08260) | [image](https://images-assets.nasa.gov/image/PIA08260/PIA08260~orig.jpg) | NASA/JPL/Space Science Institute; The Seven Sisters; see NASA image-use terms |
+| ed-pleiad-3.jpg | 2855 × 2855 | JPEG | [source](https://images.nasa.gov/details/PIA09263) | [image](https://images-assets.nasa.gov/image/PIA09263/PIA09263~orig.jpg) | NASA/JPL-Caltech; The Seven Sisters Pose for Spitzer; see NASA image-use terms |
+| ed-pleiad-4.jpg | 4007 × 3061 | JPEG | [source](https://images.nasa.gov/details/PIA13121) | [image](https://images-assets.nasa.gov/image/PIA13121/PIA13121~orig.jpg) | NASA/JPL-Caltech/UCLA; Seven Sisters Get WISE; see NASA image-use terms |

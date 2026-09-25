@@ -1,0 +1,60 @@
+# Local Anki access
+
+Use this guide with [update_src.md](update_src.md). Anki Desktop must be running with the intended profile open because AnkiConnect runs inside it.
+
+## Interfaces and startup
+
+Prefer **Codex → Anki MCP → AnkiConnect → Anki Desktop** for exposed operations. The user explicitly authorizes **direct AnkiConnect for operations unavailable through MCP**. MCP is a convenience, not a restriction; do not ask again for this general permission. Environment network/filesystem approvals still apply. Do not manipulate the live collection database directly or silently switch to desktop automation.
+
+The persistent installation is `@ankimcp/anki-mcp-server@0.25.1`, under `/home/ikohut/.local/lib/node_modules`, with executable `/home/ikohut/.local/bin/ankimcp`. It does not depend on an npx cache. Existing configuration:
+
+```toml
+[mcp_servers.anki]
+command = "/home/ikohut/.local/bin/ankimcp"
+args = ["--stdio", "--read-only"]
+
+[mcp_servers.anki.env]
+ANKI_CONNECT_URL = "http://localhost:8765"
+```
+
+Start Anki, then the CLI, which normally launches MCP over stdio. Check registration with `codex mcp list`. An active session may not expose newly registered tools; a local stdio MCP client can launch the stable executable without reinstalling it. Discover only needed tools and argument schemas.
+
+The current `--read-only` registration blocks content writes but permits some study/sync operations. Use it for inspection. For an approved update, use an available write-capable MCP connection or direct AnkiConnect under the existing fallback authorization. Do not silently alter permanent CLI configuration. Content authorization does not imply sync, review or scheduling changes.
+
+The original install command was `npm install --global --prefix /home/ikohut/.local @ankimcp/anki-mcp-server@0.25.1`. Keep it pinned unless an upgrade is requested. A persistent third-party install is not a security audit.
+
+## Direct AnkiConnect
+
+POST JSON to `http://localhost:8765`, e.g. `{"action":"deckNamesAndIds","version":6}`. Inspect both `result` and `error`. Use `apiReflect` to discover available actions, and installed add-on code/documentation for parameters; MCP tools need not share AnkiConnect names or argument shapes. Keep access on localhost. No key was required by the verified local connection on 2026-09-25. If authentication is subsequently required, use existing local configuration or request the missing credential without logging secrets or disabling authentication.
+
+The installed API lacked a deck-renaming action when checked. `changeDeck` moves cards; `saveDeckConfig` changes options, not deck names. Do not replace renaming with recreate/move/delete operations implicitly. An unavailable operation may require a focused extension, prepared separately and explained before installation/restart.
+
+## Matching and writing
+
+1. Read live decks, relevant notes/cards, model fields and templates. MCP `listDecks`, `findNotes`, `notesInfo` and media listing tools are useful. Check actual card destinations; deck existence/counts alone do not prove source completion.
+2. Find existing identifiers across the entire collection, without restricting discovery to the target deck or poet. Use established note IDs and exact identifiers plus context; loose search results are candidates, not automatic matches. An existing note in another deck is normal reuse and satisfies coverage if it fits the current poem. Check for an important missing meaning; enrich the existing note only if needed, otherwise leave it unchanged. Preserve earlier meanings and extra Anki vocabulary absent from src.
+3. Prepare and validate the approved content. Confirm supported actions and parameters before using `modelFieldNames`, `modelTemplates`, `canAddNotes`, `addNotes`, `updateNoteFields`, `cardsInfo` or `createDeck`. New decks must appear in the approved destination plan. New notes need the intended deck, live model name and actual field map.
+4. Re-read before edits to avoid overwriting manual changes. Update notes by ID to preserve history/scheduling; add only genuinely missing notes. Preserve unrelated tags/fields. Never move existing cards or change their decks during source processing or reconciliation; target decks apply only to genuinely new cards. Do not create duplicates for a new poem or treat a different deck as an error. Do not delete duplicates, alter models/templates or reset scheduling implicitly.
+5. Inspect every write result: multi/batch operations are not an all-or-nothing transaction. After a timeout, query before retrying. Read back affected fields/cards/media links before marking source records processed; verify existing cards retain their original decks and only new cards use the planned destination.
+
+The observed model is **`5 field vocabulary`**, despite containing ten fields. Reconfirm the schema before writes:
+
+| Content | Observed field |
+|---|---|
+| Identifier | `English Word` |
+| Example 1 | `English Example` |
+| Examples 2–5 | `English Example 2`, `English Example 3`, `English Example 4`, `English Example 5` |
+| Classes | `Word Class` |
+| Definitions | `English Explanation` |
+| Czech meanings | `Czech Translations` |
+| Stable image basename | `Visual` |
+
+Observed Visual values are basenames such as `ed-gentian`, not cloud paths or image HTML. Inspect the live template before assuming it supports that convention or image numbers beyond 0–4. Escape HTML-sensitive vocabulary content appropriately while preserving displayed wording. Preserve every existing non-empty Visual basename when reusing or enriching a note; omit Visual from unrelated field updates. Still produce and index the current approved images normally even if that note retains an earlier basename. Only populate Visual for a new note or an existing empty field with the approved resolved set. Do not create another note or overwrite old media to display the new set. An intentional difference between the current indexed set and the retained Anki basename is not a reconciliation error.
+
+## Local media
+
+Resolve the active profile's directory using `getMediaDirPath` or a supported MCP equivalent. On 2026-09-25 it returned `/home/ikohut/.local/share/Anki2/kohut.jan/collection.media`; verify again for future runs instead of hardcoding a profile.
+
+Download new images into that directory and save final JPEGs there using approved filesystem access or supported media operations such as `storeMediaFile`. Inspect the API's collision/overwrite options and returned filename; never overwrite resolved files or silently accept an unintended filename. Do not delete unrelated media. The common workflow specifies staging cleanup, naming, conversion, compact previews, reuse and durable saving.
+
+Keep the cumulative `image_sources.md` in the poet's repository directory and update it as images are saved. Media presence does not prove a note links to it; verify Visual fields too. A current set can be complete and indexed without replacing the older basename retained by an existing note. Historical cloud destinations/manual copying are superseded. Do not create ZIPs or batch logs. The local media files and cumulative source index establish image progress; no CSV import is required.
