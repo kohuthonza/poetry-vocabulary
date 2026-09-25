@@ -103,6 +103,7 @@ pounds
 crimson robin
 I kept the "house at hame"
 heed
+Pleiad
 it wandered from the same
 mournful ditty
 repentance solemn
@@ -191,7 +192,8 @@ Moods:
 1,3,5 - If those I loved were lost
 Words:
 crier's voice
-impel
+Ghent
+Daisy would impel me
 Visuals:
 Ghent
 Daisy
@@ -223,6 +225,7 @@ Moods:
 
 1,4,3 - When Roses cease to bloom, Sir,
 Words:
+Violets
 auburn
 Visuals:
 Violet
