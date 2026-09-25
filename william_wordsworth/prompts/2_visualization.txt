@@ -1,0 +1,149 @@
+PRELUDE VOCABULARY VISUALIZATION — REUSABLE PROMPT
+
+Apply the following workflow to the current final vocabulary CSV for the Prelude book I supply. This is an image-only extension of an existing CSV, not vocabulary creation or revision. There is no separate Visuals list: you propose the eligible records, and I approve the selection before you collect images or edit the CSV.
+
+Shared destination: /Poetry/William Wordsworth Visuals
+Persistent shared index: image_sources.md in that folder
+Filename prefix: ww-
+
+1. INSPECT AND PROPOSE — THEN STOP FOR CONFIRMATION
+
+Read the supplied CSV and identify its book from the filename or supplied context. If I supply a usable local copy, inspect that directly; do not search for another copy unnecessarily. Resolve its saved-file identity only as needed for updating the correct file. Access the shared destination through the available file service; a same-named scratch directory is not the persistent destination.
+
+Read the current shared image_sources.md once before any public image search. Reuse it across books. Do not create a separate replacement index for each book. If this established collection's index is unavailable, report that specific issue; do not assume the collection is empty or start rebuilding it.
+
+Propose vocabulary whose meaning can be illustrated concretely and without substantial ambiguity. The purpose is to give me a useful mental image of things with which I may have no direct experience, especially unfamiliar animals and plants.
+
+Selection preferences:
+- Prioritize animals and plants, and unfamiliar specific buildings or places that can be represented clearly.
+- Exclude feelings, emotions, abstract concepts, figurative ideas, and terms requiring speculative or symbolic imagery.
+- Exclude landscape terms.
+- Exclude ordinary object terms. The specifically approved exceptions are tether, peat-fire, and knave in its playing-card sense, when these occur as eligible records.
+- Exclude familiar geographical names such as London, Rome, and Cambridge.
+- Do not propose a separate yellow grunsel set. A standalone grunsel set must include at least one clearly yellow-flowered common groundsel image.
+
+Only existing standard vocabulary records qualify. Established multiword terms may qualify as whole terms. Longer excerpts and contextual fragments must remain unillustrated even if they contain an eligible word. An existing standalone vocabulary row for that word may qualify independently. Do not extract or add new rows during this image-only task.
+
+Use the complete English Word value and its actual meaning. A substring or fuzzy resemblance is insufficient: an excerpt containing alder is not an alder row. Do not conflate homonyms. For a word with several senses, identify the concrete sense being illustrated, using its explanation and available corpus context. Knave illustrates the jack in a pack of cards, not a dishonest person.
+
+Give a compact proposal table containing the row number, exact English Word, intended visual subject/sense, and whether an existing resolved set can be reused or a new set is needed. Flag meaningful identification uncertainty briefly. Give candidate counts and the expected number of new images (five per new set). Do not list every rejected CSV row.
+
+STOP and ask me to confirm or remove candidates. Do not search for or download images, change the CSV, or create image sets before this confirmation. Once I confirm, complete the approved scope autonomously; do not ask for the same permission again. Do not silently expand the approved selection.
+
+2. REUSE BEFORE SEARCHING
+
+For each approved record, first match against the index's recorded English identifiers, basenames, aliases, and meanings. Allow case, singular/plural, and superficial formatting differences only when the whole term and visual meaning remain equivalent. This matching rule authorizes image reuse only, not changes to English Word or merging vocabulary records.
+
+If a resolved set exists, use its exact stable basename. Do not search for, download, convert, duplicate, rename, or repackage those images again. Repeated equivalent records in the current batch reuse one set. Record useful newly recognized aliases in the index.
+
+Existing basenames take precedence over deriving a new name. For example, an equivalent later singular entry must reuse an established plural basename. Never attach an unrelated homonym's set. If a match is ambiguous, the set is explicitly incomplete, or files are known to be missing, report the specific issue and continue independent work. Do not treat it as an unseen term or silently replace it. Resume an identified unfinished batch from its saved progress.
+
+3. NAMING NEW SETS
+
+For an approved term without a resolved set, derive the lexical part of the basename from the complete English Word value in column 1. Never derive it from a substring, translation, alternate modern spelling, or scientific label selected during research.
+
+Lowercase the lexical spelling; turn spaces and hyphen separators into underscores; remove filename punctuation; collapse repeated underscores; remove leading/trailing underscores. Preserve spelling and inflection, including historical forms. Then prepend the literal prefix ww-.
+
+Examples:
+- grunsel -> ww-grunsel
+- peat-fire -> ww-peat_fire
+- a multiword term -> ww-a_multiword_term
+
+Create five distinct initial images named basename-0.jpg through basename-4.jpg. Check normalized names against the shared index and existing filenames before writing. Resolve incompatible meanings or filename collisions explicitly; never overwrite or combine existing resolved sets.
+
+The CSV stores only the basename, such as ww-peat_fire: no path, number, extension, HTML, or filename list.
+
+4. FIND APPROPRIATE EXISTING IMAGES
+
+Use publicly accessible real photographs or suitable existing illustrations. Do not generate substitute imagery. Prefer relevant botanical, ornithological, museum, scientific, and other reliable sources, including well-documented photographic collections.
+
+For animals and plants, prefer photographs from the relevant place when known. For a Cumbrian passage, prefer suitable Cumbrian examples, then British examples, while prioritizing correct identification and a clearly visible subject. For passages set elsewhere, use that locality where appropriate. Do not substitute a local species for a clearly different named species. Record significant identification choices and any use of representative specimens from another region. These illustrate vocabulary; they are not proof of the exact historical specimen intended by the poet.
+
+Choose useful subject detail and reasonable variety, such as flowers/leaves/whole plant or different animal poses. Avoid distant or obscured subjects, wrong species, unreadable pictures, and duplicate copies or crops of the same photograph. Tether images must visibly show the restraint, not merely an animal. Peat-fire means domestic peat fuel, not a peatland wildfire. Stop selecting once five suitable, distinct images pass the checks; do not keep replacing satisfactory images for marginal aesthetic gains.
+
+Prefer adequately sized source renditions over tiny thumbnails. Record the source-page URL, direct downloaded-image URL, retrieval date, and available authorship/licence information in the compact index format defined below. Do not write a separate report for each image. Preserve existing credits and watermarks. Public access alone is not a reuse licence. Do not invent missing attribution or licensing information.
+
+5. CONVERT WITHOUT RESIZING THE DELIVERED FILES
+
+Use an ordinary image conversion tool such as Pillow. Decode each retrieved image and save actual JPEG data; changing the extension alone is insufficient.
+
+Preserve the retrieved image's pixel dimensions and aspect ratio. Do not resize, upscale, or crop the delivered images. Correct orientation when necessary and record any width/height swap. Composite transparency onto white, convert to RGB, and use high-quality JPEG encoding, for example quality 95.
+
+If an image is too small or unclear, obtain a better source instead of enlarging it. Record the pixel dimensions once in the source table; they describe the downloaded website rendition, not a camera/master original unless that is established. Note any orientation-related dimension swap briefly as an exception. Existing SVG illustrations may be obtained as suitable website raster renditions and converted, with the downloaded format recorded accurately.
+
+Decode each completed JPEG to verify its format and dimensions. Check distinctness and inspect all NEW selected images visually as described below. Trust previously resolved sets unless there is concrete contrary evidence.
+
+6. KEEP CONTEXT AND CREDIT USE SMALL — REQUIRED EXECUTION RULES
+
+Keep model involvement focused on selecting eligible records, resolving real identification questions, inspecting compact contact sheets, and reporting results. Run routine retrieval, conversion, saving, index edits, and validation through a short scripted workflow. Ordinary file processing is inexpensive; avoid surrounding it with large model-context dumps and repeated model decisions. These efficiency rules do not reduce image quality, attribution, immediate durable saving, or final validation requirements.
+
+Discovery and initial inspection:
+- Discover only the capabilities needed for the next operation. Filter tool names first, then inspect only the selected tools' schemas. Never print a full tool registry or a broad match containing unrelated tool documentation. Read required skills once and reuse them.
+- Retain complete service responses in program state or scratch when needed by file helpers; return only relevant identities, paths, versions, counts, and errors to the model. Do not dump an entire folder inventory or source index into context merely to locate a file or check basename reuse.
+- Parse the CSV locally. Inspect a compact numbered list of English Word values, then the meanings and examples needed to judge candidates. Read the current index locally once and expose its compact subjects/aliases/status information and any relevant unfinished batch. Keep the full source table available to scripts. Avoid repeated complete CSV or index prints.
+
+Source discovery and retrieval:
+- Start with a small targeted search for each approved new subject, preferably on a suitable reliable collection. Request short results and use actual domain filters when restricting a search. Expand only if identification, access, quality, or variety is insufficient; stop when five suitable distinct images are secured.
+- Use one source-retrieval route per candidate. Prefer a supported metadata endpoint or a local HTTP fetch parsed by a script when available. Retain full HTML/JSON outside model context. Expose only a compact record: source-page URL, image URL, subject/species, relevant locality, photographer, licence, rendition dimensions if available, and any uncertainty.
+- Inspect the actual source evidence; search snippets alone do not establish attribution, licence, or identification. If parsing leaves a question unresolved, show only the relevant source passage. Do not print navigation menus, unrelated results, page scripts/styles, EXIF dumps, or complete HTML. Aim for a few hundred words per source record and about 1,000 tokens per routine result batch; use a larger targeted excerpt only when necessary.
+- Reuse pages and metadata already retrieved. Do not fetch the same page through both web browsing and Python just to re-establish the same facts. When a second fetch is technically necessary to obtain bytes or missing fields, retain it locally and return only the missing information.
+- Use the available runtime and dependencies. Check the necessary imports once; prefer standard-library HTTP/HTML tools over repeated attempts to import unavailable packages. Use an honest descriptive User-Agent where requested by the source. Test the first selected image through the real download/conversion/save path so successful bytes are kept, not discarded and downloaded again.
+- On a blocked or rate-limited source, respect the response and switch to a legitimate alternative collection or supported rendition. Avoid repeated blind retries and do not bypass access restrictions. Continue the approved scope autonomously while useful alternatives remain; report only genuinely unresolved work. A past failure is not proof that a source is permanently inaccessible.
+
+Execution and saving:
+- Use one compact script or a small set of reusable functions for download -> decode/convert/name -> verify -> durable image save -> mechanical index update and durable save. Iterate through the approved images automatically, preserving required write order and source rate limits. Reuse an existing suitable script when available; do not build an elaborate framework for one small batch.
+- Keep structured source records and save results outside model context. Return concise progress counts, per-file save status when needed, and actionable errors. Do not return to the model merely to approve each filename, perform the next routine download, or rewrite an index row. Do not use subagents for this workflow unless explicitly requested.
+- Await running work with meaningful waits or progress events rather than repeated short status polls. Keep user updates concise at natural milestones and as required by the environment. Resume model judgment for a genuine exception, a set's contact-sheet review, or final delivery.
+- Keep immediate saving of BOTH images and source metadata as required by section 7. A script may read/reconstruct the complete local index and upload the complete file as a new version of the same persistent file if remote patching is unavailable. This does not require loading the index into model context again. Do not delay durable metadata saves in the name of reducing model usage.
+- Retain the latest saved file identity/version. Build each update from the current working index, preserving earlier entries. If a version conflict occurs, reconcile the current file's additions before retrying; never overwrite concurrent work with a stale snapshot.
+
+Visual review and checks:
+- Never load huge full-resolution photographs into conversation. Create one temporary contact sheet per new set, typically 240–320 pixels per image and roughly 1,200–1,400 pixels across, and inspect that set once. For a concrete unresolved identification or visibility issue, inspect only the affected image at no more than about 800 pixels on its longest edge. Preview resizing is permitted; delivered JPEG dimensions must remain unchanged. Exclude previews from the ZIP.
+- Use one focused final scripted validation as specified in section 9, returning a short summary and any failures. Repeat only the affected checks after a correction. Do not reopen successfully saved files solely to reconfirm a successful save, or repeat checks on unchanged resolved sets.
+- For a simple CSV field check or fix, inspect field counts and relevant rows with a script. Do not launch image searches, regenerate images, or re-download existing files.
+
+7. SAVE PROGRESS IMMEDIATELY AND DURABLY
+
+Do not leave finished images only in /tmp, a cache, or transient scratch storage until the whole book is complete.
+
+For each selected image, download it, convert and name it, run the automatic format/dimension checks, then save the JPEG into /Poetry/William Wordsworth Visuals immediately when supported. Mark it pending visual review until the compact set preview has been inspected. This allows immediate saving without fifty separate image-preview calls. Use the smallest practical durable upload batch if the interface requires batching. Do not defer saving until all five images or all terms are finished merely for convenience.
+
+Persist the corresponding source-table row and concise batch progress in the shared index alongside these saves, preferably in the same small save operation. Do not create a separate verbose checkpoint report. Track the batch identifier, allocated basename, incomplete/resolved status, exact successfully saved filenames, and the batch's cumulative NEW-file list. Never claim a file is durably saved until its save succeeds. If persistent saving fails, report it promptly rather than continuing to accumulate a large vulnerable cache.
+
+Inspect each new set using its compact contact sheet before marking it resolved. If a candidate fails visual review, replace only that provisional file in the current unresolved set and update its metadata; never overwrite a previously resolved shared set. Mark a new set resolved only when five suitable JPEGs have been converted, visually checked, and successfully saved. Keep unfinished work explicit. If interrupted, resume from saved files and metadata; reconcile any small discrepancy between the index and successfully saved files without repeating completed downloads. Files created earlier in the same unfinished batch remain NEW for that batch's eventual ZIP.
+
+8. UPDATE THE CSV AND CUMULATIVE INDEX
+
+The current target CSV is headerless UTF-8. Preserve its original nine fields exactly, including English Word, all five examples, word class, explanation, and Czech translations. Preserve every row and its order. Do not normalize capitalization, correct spelling, merge duplicates, revise meanings, or add examples during this task.
+
+Append a tenth and last field, Image basename. If it already exists, update that field rather than adding another column. Populate it only for approved standard records linked to resolved sets. Leave it empty for all other records, including fragments, excluded terms, and unresolved new sets. Do not add a header row or replace blanks with placeholders.
+
+Keep image_sources.md SIMPLE, following the compact Emily Dickinson index style. Use the existing Wordsworth index as the working template; there is no need to retrieve the Dickinson file again in every batch. Preserve prior terms, stable basenames, sources and essential reuse information when appending.
+
+Use only:
+- A short introduction with collection counts and the shared naming/conversion conventions, stated once.
+- A compact representative-subject table: English Word | CSV basename | Representative subject | Aliases (same meaning only). State resolved status collectively when all sets are complete; mark individual incomplete or ambiguous sets explicitly. Add only brief identification notes that matter for reuse.
+- ONE source table with ONE ROW PER IMAGE: Filename | Pixels (W x H) | Source format | Source page | Image URL | Credit / licence. The filename rows are the authoritative available-file list, including any numbers above 4. Use short link labels. Record each retrieval date once for the relevant batch/group, not on fifty repeated lines. Record dimensions once when downloaded and saved dimensions are identical; describe any orientation swap only as an exception. Keep available attribution/licence details concise; source pages provide the fuller context. Do not invent missing rights information.
+- A short dated batch log with new and reused basenames, new filenames (or unambiguous basename/number ranges), unresolved work, and counts. Update it even for an entirely reused batch. This small log also supplies the durable progress record needed to resume work and build the new-images-only ZIP.
+
+Do not create per-image subsections, hash listings, repeated conversion/verification narratives, duplicated filename inventories, or lengthy audit reports. Do not repeat these workflow instructions inside the image index. Check correctness with scripts, but do not dump internal checks into the documentation. Keep the index short enough to read economically in later batches.
+
+Later extra images use the next unused number, such as basename-5.jpg; preserve existing names and CSV basenames. The Anki renderer must know or discover the available image count.
+
+9. VALIDATE AND DELIVER
+
+Run one focused final scripted check:
+- Every CSV row has ten fields, and the first nine match the pre-image CSV exactly.
+- Row count and order are unchanged.
+- Only approved, eligible records have non-empty image basenames.
+- Every non-empty basename resolves to a completed new set or a previously resolved set.
+- Each new initial set has five distinct, valid, checked JPEGs with correct ww-prefixed filenames and preserved dimensions.
+- The shared index preserves previous records and includes all current additions and reuse/progress logs.
+
+Build the ZIP from the explicit current batch NEW-file list, never by zipping the entire shared folder. Include only newly added final JPEGs at the archive root. Exclude reused/old images, CSVs, the index, reports, contact sheets, rejected candidates, and temporary downloads. Resuming the same batch does not make its earlier-created images old. A subsequent book reusing them must exclude them from its ZIP.
+
+If no new images were added, do not create an empty or cumulative ZIP. State that the approved sets were reused.
+
+Deliver the updated current CSV, cumulative image_sources.md, and any new-image ZIP separately. Save the updated CSV under its existing file identity when supported. Give a link to the current version; avoid creating multiple ambiguously named copies. Report newly resolved terms, reused terms, new images, unresolved terms, total vocabulary rows, standard rows, excerpt rows, and example count. State that the original nine CSV fields were preserved.
+
+Begin now with the proposal only, and wait for my confirmation.

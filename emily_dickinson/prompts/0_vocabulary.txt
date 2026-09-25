@@ -1,0 +1,469 @@
+EMILY DICKINSON VOCABULARY CSV AND VISUAL WORKFLOW INSTRUCTIONS
+
+This is a self-contained specification for constructing and maintaining Emily Dickinson vocabulary CSV files from the user's annotated reading notes, together with the shared visual-vocabulary collection. It is specific to the Emily Dickinson project and should not be treated as a general vocabulary or visualization prompt.
+
+Primary corpus context: Emily Dickinson, Poems: As She Preserved Them. The user's fascicle/sheet/poem headings are project structure, not Franklin or Johnson numbering.
+
+Shared visual destination: /Poetry/Emily Dickinson Visuals
+Persistent visual index: image_sources.md in that folder
+Image filename/basename prefix: ed-
+
+1. PURPOSE AND OUTPUT FORMAT
+
+Each Emily Dickinson vocabulary CSV is a headerless UTF-8 CSV with exactly ten fields per record, in this order:
+
+1. English Word
+2. English Example
+3. English Example 2
+4. English Example 3
+5. English Example 4
+6. English Example 5
+7. Word Class
+8. English Explanation
+9. Czech Translations
+10. Image basename
+
+Every row has exactly ten fields, including rows whose Image basename is empty.
+
+“English Word” can contain a single word, a general English phrase, or an excerpt. It is the record's identifying field.
+
+Use commas as CSV delimiters and standard CSV escaping. Prefer quoting every field with double quotes. Escape a double quote inside a field by doubling it. An empty example or Image basename field is represented as "". Do not add a header, numbering column, record-type column, source column, commentary row, or any other field.
+
+The first nine fields contain the vocabulary content. The tenth field stores only the stable image basename when the record has an approved resolved visual set.
+
+2. PARSING THE EMILY DICKINSON NOTES
+
+The normal input is a set of annotated Emily Dickinson reading notes organized by poem.
+
+Each poem heading has the form:
+
+N,N,N - first line
+
+The three numbers indicate fascicle, sheet, and poem order in Poems: As She Preserved Them. They are structural metadata, not part of the poem's first line or a vocabulary record, and must not be treated as Franklin or Johnson poem numbers. The text after the initial " - " delimiter identifies the poem and may be used for source lookup and context. Preserve any later dashes as part of the first-line text.
+
+Under each poem:
+
+- Only non-empty entries under “Words:” are submitted vocabulary records.
+- Stop the Words section at the following “Visuals:” label.
+- Entries under “Visuals:” are NOT vocabulary records. They are the user's manual indication of which vocabulary concepts should receive images.
+- Ignore Moods, Sent, Tags, and other metadata sections as vocabulary input.
+- An empty Words section contributes no vocabulary records.
+- Keep the poem heading associated with its Words and Visuals entries for context and reporting, but do not add it as a CSV field or row.
+
+Each non-empty Words entry line is one submitted record. Do not split it merely because it contains commas, semicolons, or several words. Remove numbering or external markup only when it is clearly not part of the selected wording. Preserve punctuation and spelling that belong to the record.
+
+The Visuals list is manually curated by the user. Do not estimate or propose additional visualizable vocabulary merely because a term is concrete. A term can receive images only when it is selected through the Visuals list and qualifies under section 13.
+
+If note boundaries or labels are genuinely unclear, process the unambiguous material and report the specific unresolved parsing issue.
+
+3. CLASSIFY EACH VOCABULARY RECORD
+
+A. Standard vocabulary record: exactly five examples
+
+Treat every single word and every short general English phrase as a standard record. This includes inflected words, historical spellings, phrasal verbs, idioms, and short reusable expressions or ordinary vocabulary combinations.
+
+Examples: “respite”, “dwindled”, “make room for”, “in spite of”, “steep slope”.
+
+B. Excerpt or contextual fragment: no examples
+
+Treat every other record as an excerpt: a longer expression, clause, sentence, or context-specific fragment whose particular wording is the material being studied. Leave all five example fields empty. Still provide Word Class, English Explanation, and Czech Translations.
+
+Length is a guide, not an arbitrary word-count threshold. A short fragment can be an excerpt when tied to a particular passage rather than functioning as general vocabulary. A multiword established expression can still be a standard record.
+
+Do not manufacture five paraphrases or variations of an excerpt. The excerpt itself supplies the contextual language material.
+
+4. EXTRACT STANDALONE VOCABULARY FROM EVERY EXCERPT
+
+In addition to retaining each excerpt record, scan the entire excerpt for every nonstandard, advanced, unfamiliar, archaic, dialectal, or otherwise noteworthy vocabulary item. Include useful general English phrases, idioms, and phrasal verbs as well as individual words.
+
+Pay attention to familiar words used in an unusual or advanced sense. Selection is based on usage, not only spelling. Do not mechanically create entries for ordinary function words or elementary words used in their ordinary sense.
+
+Create a standard record with exactly five examples for each selected item. Each extracted record must be fully understandable on its own, with its own meanings, classes, examples, and Czech translations. Do not write “as above”, “see the excerpt”, or definitions that depend on another record.
+
+For newly extracted ordinary inflections, normally use the dictionary lemma. Preserve a distinctive historical or dialectal form when that form itself is the learning target, explaining its relationship to the modern form. Do not use extraction as permission to replace or lemmatize a separately submitted Words record.
+
+When a useful phrase and an independently useful advanced word within it both merit study, include both. Do not create another row if the same normalized identifier is already represented; merge according to section 10.
+
+Place newly extracted entries immediately after their parent excerpt, in order of first appearance within it. Preserve the parent poem association so Visuals matching can later be performed correctly.
+
+5. FIRST-COLUMN WORDING AND CAPITALIZATION
+
+Preserve submitted wording, spelling, inflection, punctuation, and spacing except for approved typo corrections, authorized capitalization normalization, and removal of clearly external input markup.
+
+Do not silently modernize historical spelling, replace an inflected submitted record by its lemma, rewrite an excerpt, or silently correct a suspected typo.
+
+Normalize capitalization as follows:
+
+- Lowercase ordinary words, including beginnings of excerpts. Remove capitals arising only from sentence or verse position, historical printing conventions, personification, or poetic emphasis.
+- Preserve or restore capitals required by standard English usage: I, proper names, nationalities, languages, and other conventionally capitalized terms.
+- Resolve meaning-dependent cases individually from context. Use God for the particular deity and god for a deity generically. Apply the same principle to names and conventional religious or institutional designations.
+- Do not apply indiscriminate lowercasing or title case.
+- If consequential capitalization remains ambiguous, retain the supplied case provisionally and flag it for the user's decision.
+- These rules apply to English Word, including newly extracted entries. Examples use ordinary sentence capitalization.
+
+For a later capitalization-only edit, change only first-column capitalization and any necessary duplicate merges. Preserve all other fields, wording, punctuation, spacing, historical forms, and row order.
+
+6. MEANINGS AND SEMANTIC COVERAGE FOR STANDARD RECORDS
+
+First identify the source-context meaning where context is available. Always retain a meaning actually used in the poem or supplied material, even when rare, archaic, unusual, or marginal.
+
+Then include all reasonably useful additional lexical senses and grammatical uses. Exclude bizarre or extremely marginal additional uses unrelated to the source. Do not impose a fixed maximum number of senses, copy every dictionary subdivision, or split minor contextual shades unnecessarily.
+
+Put the identifiable source sense first in English Explanation, Czech Translations, and Word Class, and demonstrate it in Example 1. For an isolated word without usable context, start with a common or central sense. Do not invent source context.
+
+Normally every retained sense should appear in at least one of the five examples. If more than five genuinely useful distinct senses remain, keep them in the aligned semantic fields even though some cannot receive an example. Still provide exactly five examples, prioritizing the source sense and representative additional uses.
+
+Every example must demonstrate a sense included in the explanation and Czech translation.
+
+7. EXAMPLE QUALITY
+
+For each standard record, write exactly five natural, concise, independent English sentences suitable for vocabulary study.
+
+Vary situations, collocations, subjects and objects, syntax, and grammatical environments where natural. For words with several senses, distribute examples across them. For words with one sense, show several natural uses of that sense without inventing extra meanings.
+
+Do not create superficial variations by changing only a name, adding a time phrase, or wrapping the same sentence in phrases such as “At the time” or “Years later”.
+
+Natural inflection is allowed. Each example must clearly illustrate the entry's lexical item or construction. Do not force multiple sentences into one field to bypass the five-example limit.
+
+When source context is available, it guides the meaning. Example 1 need not quote Dickinson verbatim; a new standalone sentence illustrating the same sense is usually more useful.
+
+8. WORD CLASS, ENGLISH EXPLANATION, AND CZECH TRANSLATIONS
+
+These three fields must describe the same senses in the same order.
+
+Use a semicolon only to separate distinct lexical senses or grammatical uses. Every semicolon-delimited segment in Word Class must correspond positionally to one segment in English Explanation and one in Czech Translations. The number of segments must agree exactly across all three fields.
+
+Repeat the class when different senses share it.
+
+Use commas for synonyms or closely related formulations within one sense. Do not use semicolons merely as stylistic punctuation inside one definition.
+
+Word Class:
+
+- Give the lexical class, such as noun, verb, adjective, adverb, or an appropriate phrase class.
+- Do not include tense or inflection in this field. Use “verb”, not “verb, past tense”.
+- For excerpts, use a suitable syntactic label such as clause, sentence, noun phrase, or prepositional phrase.
+
+English Explanation:
+
+- Give concise, accurate definitions of all retained senses.
+- Identify register, historical or dialectal spelling, unusual grammar, tense, inflection, and lemma where useful.
+- Be truthful about uncertainty and distinguish separate lexical meanings from contextual shades.
+
+Czech Translations:
+
+- Translate the established English senses in the same order, using natural, precise Czech.
+- For ordinary verb vocabulary, normally use Czech infinitives. Explain a supplied English inflected form in English Explanation.
+- For complete expressions and excerpts, preserve their actual grammatical form and contextual meaning rather than reducing them to dictionary infinitives.
+- Include every retained sense, including useful senses beyond the five-example capacity.
+
+9. EXCERPT EXPLANATIONS AND TRANSLATIONS
+
+The excerpt's five example fields stay empty.
+
+Give a short language-focused explanation covering only what helps understand the wording: syntax, unusual word order, idiom, archaic usage, contextual lexical senses, ellipsis, or translation-relevant nuance.
+
+Do not add literary interpretation, symbolism, thematic commentary, speculation about Dickinson's intention, or discussion of what a passage “suggests” unless the user separately requests it.
+
+Translate the supplied fragment itself into Czech. Preserve its incompleteness when incomplete. Do not silently invent missing clauses or enlarge the first-column quotation.
+
+Do not give an excerpt a dictionary-style inventory of broad alternative meanings. Broader meanings of component words belong in their standalone records.
+
+10. ORDER AND DUPLICATES
+
+Preserve poem order and record order from the submitted notes. Insert extracted vocabulary after its parent excerpt as described above. Do not alphabetize unless requested.
+
+No two output records may have an identical English Word value after approved typo corrections and capitalization normalization.
+
+Merge exact identifier matches whether they arise from repeated input, vocabulary extraction, or normalization. Retain the earliest occurrence's position. Preserve all useful distinct senses, source usages, and translation nuances. A merged standard record has exactly five examples in total; a merged excerpt has none.
+
+Do not merge different spellings, inflections, punctuation, or wordings merely because they are related. Do not merge meaningfully distinct capitalization forms such as God and god.
+
+Report duplicate merges and account for them in the final row count.
+
+11. SOURCES, TEXTUAL VARIANTS, UNCERTAINTY, AND TYPOS
+
+Use the poem's first-line text from its heading, without the N,N,N structural prefix, to locate context for ambiguous readings, unusual syntax, historical forms, uncertain senses, and suspected typos.
+
+Identify the actual manuscript, edition, or transcription consulted. Do not assume another version reproduces Poems: As She Preserved Them exactly.
+
+Known routine-access failures recorded during Fascicle 1 work, 10 September 2026:
+
+- Emily Dickinson Archive (https://www.edickinson.org/) returned an access error; its manuscript images and editorial transcriptions were not verified.
+- Poetry Foundation's Dickinson page (https://www.poetryfoundation.org/poets/emily-dickinson) was inaccessible; no Franklin Reading Edition text was verified through that source.
+
+Treat those sources as unavailable for routine lookup in this workflow. Do not repeatedly retry them in every fascicle. Revisit only if the user requests it or supplies evidence that access is available.
+
+Use supplied text and accessible alternatives directly. Wikisource and PoemHunter were accessible during Fascicle 1; prefer sources with identifiable edition information and use unspecified transcriptions cautiously. Reliable dictionaries remain appropriate for lexical and historical meanings.
+
+If a further source proves inaccessible, record the failure briefly and move to a legitimate accessible alternative. Do not hammer blocked or rate-limited sites and do not bypass access restrictions.
+
+Report meaningful textual variants rather than silently normalizing them. An attested variant is not automatically a typo.
+
+Suspected typo handling is governed by the mandatory running protocol in section 14. In particular, suspected typos must be proposed to the user before vocabulary generation and before visual matching, and only user-approved corrections may be applied.
+
+12. VOCABULARY VALIDATION
+
+Before final delivery, verify with a CSV parser or focused script:
+
+- Valid UTF-8, valid CSV quoting, no header, exactly ten fields per row.
+- Every selected Words record is accounted for directly or through an explicitly identified duplicate merge.
+- Every excerpt has been scanned for advanced/nonstandard vocabulary and useful general phrases.
+- Exactly five non-empty example fields for every standard record and five empty example fields for every excerpt.
+- Examples are varied, independent, and illustrate stated senses.
+- Source meanings are retained and placed first when identifiable.
+- Useful additional senses are included without arbitrary caps or unnecessary splitting.
+- Word Class, English Explanation, and Czech Translations have equal numbers of aligned sense segments.
+- Word Class contains no tense information.
+- Excerpt explanations remain linguistic and translations reflect the supplied wording.
+- First-column capitalization follows section 5.
+- Only user-approved typo corrections have been applied.
+- No duplicate English Word values remain after approved normalization.
+- Intended record order is preserved.
+
+Automated checks establish structure, not semantic accuracy. Review definitions, examples, extraction coverage, translations, and ambiguous source readings directly.
+
+13. EMILY DICKINSON VISUALS AND SHARED IMAGE INDEX
+
+A. Visual eligibility comes only from the user's Visuals lists
+
+The Visuals sections are manual image-selection instructions. Do not automatically estimate what should be visualized, and do not add extra visual candidates merely because they are concrete or easy to illustrate.
+
+Match a vocabulary record's entire English Word value to a Visuals entry associated with the same poem. Allow case, singular/plural, and superficial formatting differences only when the term and meaning remain the same. Do not use substring or fuzzy similarity as sufficient evidence.
+
+Only standard vocabulary records qualify. An established multiword term may qualify when the entire term matches. Longer excerpts and contextual fragments must have an empty Image basename even when they contain a Visuals term. A standalone vocabulary row extracted from such a fragment may qualify independently when its whole English Word matches the Visuals entry from the same poem.
+
+A word listed only under Visuals does not create a vocabulary row. If a Visuals entry has no eligible corresponding vocabulary record after approved typo handling and required excerpt extraction, report it as unmatched; do not create a visual-only CSV row or image set.
+
+Visual matching is for image selection only. It does not authorize changes to English Word, typo correction, or merging otherwise distinct records.
+
+B. Read and reuse the shared index before proposing or searching
+
+Use /Poetry/Emily Dickinson Visuals as the shared image collection and image_sources.md in that folder as the persistent cumulative index across fascicles.
+
+Read the current index once during the proposal stage before any public image search. Do not create a separate replacement index for each fascicle. If the established index is unavailable, report that specific issue; do not assume the collection is empty or start rebuilding it.
+
+For every eligible term, first check whether the index already records a resolved set for the same whole term and visual meaning. Match against recorded English identifiers, stable basenames, aliases, and representative meaning. Allow case, singular/plural, and superficial formatting differences only when the meaning remains equivalent.
+
+If a resolved set exists, reuse its exact stable basename. Existing basenames take precedence over deriving a new one. Do not search for, download, convert, duplicate, rename, inspect again without reason, or repackage those images. Repeated equivalent occurrences reuse the same set. Add a useful newly recognized alias to the index when appropriate.
+
+Reuse requires the same visual meaning, not merely similar spelling. Never attach an unrelated homonym's image set. If a match is ambiguous, explicitly incomplete, or known to have missing files, report the issue; do not silently treat it as unseen or replace the existing set.
+
+C. Naming new image sets
+
+For an approved eligible term without a resolved set, derive the lexical part of the basename from the complete English Word value in column 1. Never derive it from a substring, the Visuals spelling when it differs, a Czech translation, alternate modern spelling, or a scientific label chosen during research.
+
+Lowercase the lexical spelling; turn spaces and hyphen separators into underscores; remove filename punctuation; collapse repeated underscores; remove leading/trailing underscores. Preserve lexical spelling and inflection, including historical forms. Then prepend the literal prefix ed-.
+
+Examples:
+
+- gentian -> ed-gentian
+- peat-fire -> ed-peat_fire
+- a multiword term -> ed-a_multiword_term
+
+Check normalized names against the shared index and existing filenames before writing. Resolve incompatible meanings or filename collisions explicitly. Never overwrite or combine an existing resolved set.
+
+Create five distinct initial images named basename-0.jpg through basename-4.jpg. The CSV stores only the stable basename, such as ed-gentian: no path, number, extension, HTML, or filename list.
+
+Leave Image basename empty for ineligible records and unresolved new sets.
+
+D. Find appropriate existing images
+
+For NEW approved terms only, search publicly accessible sources for real photographs or suitable existing illustrations. Do not generate substitute imagery.
+
+Prefer reliable botanical, ornithological, museum, scientific, university, governmental, and other relevant sources. For plants and animals, favour species appropriate to Amherst, Massachusetts, and New England when consistent with the vocabulary meaning and poem context. Do not substitute a local species for a clearly different named species.
+
+Treat images as representative vocabulary illustrations, not proof of the exact historical specimen Dickinson intended. Record significant identification choices in the shared index.
+
+Choose images with a clearly visible subject and reasonable variety where useful: e.g. whole plant, flower, leaf, different animal poses, raw/cut mineral views, or multiple perspectives of an object. Reject wrong subjects, distant or obscured subjects, unreadable images, and duplicate copies/crops of the same photograph.
+
+Prefer adequately sized source renditions over tiny thumbnails. Stop after five suitable distinct images pass the checks; do not keep replacing satisfactory images for marginal aesthetic gains.
+
+Record the source-page URL, direct downloaded-image URL, retrieval date, available authorship/licence information, and downloaded source format. Preserve existing credits and watermarks. Public accessibility alone does not establish a reuse licence. Do not invent missing attribution or licence information.
+
+E. Convert delivered files to actual JPEG without resizing
+
+Use an ordinary image conversion tool such as Pillow. Decode every retrieved image and save actual JPEG data; changing a file extension alone is not conversion.
+
+Preserve the retrieved image's pixel dimensions and aspect ratio. Do not resize, upscale, or crop the delivered JPEGs. Correct orientation when necessary and record any width/height swap. Composite transparency onto white, convert to RGB, and use high-quality JPEG encoding, for example quality 95.
+
+If an image is too small or unclear, obtain a better source instead of enlarging it.
+
+Record pixel dimensions as the downloaded website rendition, not as an unavailable camera/master original unless that is genuinely established.
+
+Decode each completed JPEG to verify actual format and dimensions. Check distinctness and inspect all NEW selected images visually before marking a set resolved. Previously resolved sets should be trusted unless there is concrete contrary evidence.
+
+F. Keep image context and tool use small
+
+Use a short scripted workflow for CSV parsing, basename construction, image conversion, dimension checks, duplicate detection, index assembly, and ZIP construction. Avoid repeated broad searches, excessive metadata dumps, unnecessary agents, and repeated checks of unchanged work.
+
+Never load huge full-resolution source photographs into the conversation merely for inspection. Create temporary reduced previews or compact contact sheets, typically about 240–320 pixels per image and roughly 1,200–1,400 pixels across for a set.
+
+Inspect each completed NEW set once using the compact preview/contact sheet. If a particular identification or visibility issue remains, inspect only that image in a modest preview, normally no more than 800 pixels on its longest edge.
+
+Preview resizing is allowed. The delivered JPEGs must retain their downloaded dimensions and aspect ratio.
+
+Never include previews or contact sheets in the final image ZIP or shared image collection.
+
+Reuse source pages and metadata already obtained. Do not reopen them merely to reconfirm recorded facts. Use targeted additional research only to resolve a concrete uncertainty.
+
+When a site blocks downloads or rate-limits requests, respect the response. Use a legitimate alternative source or supported rendition, or report the unresolved item. Do not repeatedly retry or bypass access restrictions.
+
+For a simple CSV basename check or correction, read the actual CSV with a script and inspect field counts and relevant rows. Do not launch image searches, regenerate images, or re-download files unnecessarily.
+
+G. Save progress immediately and durably
+
+Do not leave finished image work only in /tmp, a browser cache, transient scratch storage, or an in-memory session until the whole fascicle is complete.
+
+For each selected NEW image:
+
+1. download it;
+2. convert and name it correctly;
+3. run automatic format/dimension checks;
+4. save the final JPEG into /Poetry/Emily Dickinson Visuals as soon as practical;
+5. mark it pending visual review until the compact set preview has been inspected.
+
+Use the smallest practical durable upload batch when the interface requires batching. Do not defer durable saving until all five images or all terms are finished merely for convenience.
+
+Persist the corresponding compact source-table row and concise batch progress in image_sources.md alongside these saves when practical. Track the fascicle/batch identifier, allocated basename, incomplete/resolved status, exact successfully saved filenames, and the batch's cumulative NEW-file list.
+
+Never claim that a file is durably saved until the save succeeds. If persistent saving fails, report it promptly rather than continuing to accumulate a large vulnerable cache.
+
+Inspect each new set using its compact contact sheet before marking it resolved. If a candidate fails visual review, replace only that provisional file in the current unresolved set and update its metadata. Never overwrite a previously resolved shared set.
+
+Mark a new set resolved only after five suitable JPEGs have been converted, checked, visually reviewed, and durably saved. Keep unfinished work explicit. If work is interrupted, resume from saved files and metadata without repeating completed downloads. Files created earlier in the same unfinished batch remain NEW for that batch's eventual ZIP.
+
+H. Keep image_sources.md cumulative and compact
+
+Maintain one cumulative image_sources.md. Preserve all previous terms, basenames, aliases, source rows, filenames, and essential identification notes.
+
+Keep the index simple, using the current Emily Dickinson format:
+
+- A short introduction with collection counts and shared naming/conversion conventions, stated once.
+- A compact representative-subject table:
+  English Word | CSV basename | Representative subject | Aliases (same meaning only)
+- One source table with one row per image:
+  Filename | Pixels (W x H) | Source format | Source page | Image URL | Credit / licence
+- A short dated fascicle/batch log listing new and reused basenames, new filenames or clear basename/number ranges, unresolved work, and counts.
+
+State resolved status collectively when all listed sets are complete; mark individual incomplete or ambiguous sets explicitly.
+
+Record dimensions once when downloaded and saved dimensions are identical. Record any orientation-related width/height swap only as an exception. Keep rights/credit information concise and truthful.
+
+Do not create per-image prose subsections, hash listings, repeated conversion narratives, duplicate filename inventories, lengthy audit reports, or repeated copies of these workflow instructions.
+
+Additional images may later be appended using the next unused number, such as ed-gentian-5.jpg. Preserve the basename and existing filenames. Update the source table and batch log. Do not change the CSV merely because the set has more images; the Anki renderer must know or discover the available image count.
+
+I. Update the CSV only with approved resolved basenames
+
+Populate Image basename only for approved eligible standard records linked to a resolved set.
+
+For reused sets, write the already established stable basename.
+
+For new sets, write the basename only after the set becomes resolved. If the new set remains incomplete or unresolved, leave the CSV field empty and report the issue.
+
+When performing image-only edits on an existing CSV, preserve fields 1–9 exactly unless the current task also explicitly includes approved vocabulary/typo changes. Preserve row order and row count except for separately authorized vocabulary duplicate merges or additions required by the vocabulary workflow.
+
+J. Validate and deliver the current batch
+
+Run one focused final scripted check:
+
+- Every CSV row has exactly ten fields.
+- All vocabulary fields and row order match the approved vocabulary result.
+- Only approved eligible records have non-empty Image basenames.
+- Every non-empty basename resolves to a previously resolved set or a newly completed set.
+- Existing reused basenames remain stable.
+- Each new initial set has five distinct valid checked JPEGs with correct ed-prefixed filenames and preserved dimensions.
+- The shared index preserves previous records and includes all current additions, aliases, and batch progress.
+
+Build the final ZIP from the explicit current-batch NEW-file list, never by zipping the entire shared folder.
+
+The ZIP must contain only newly added final JPEGs at the archive root. Exclude reused/old images, CSVs, image_sources.md, reports, contact sheets, rejected candidates, and temporary downloads.
+
+Resuming the same unfinished batch does not make its earlier-created images old. A later fascicle that merely reuses those sets must exclude them.
+
+If no new images were added, do not create an empty or cumulative ZIP. State that all approved visual sets were reused.
+
+Deliver the updated CSV, cumulative image_sources.md, and any new-image ZIP separately. Report:
+
+- submitted Words records;
+- extracted vocabulary records;
+- duplicate merges;
+- final vocabulary rows;
+- standard records;
+- excerpt records;
+- generated examples;
+- reused visual terms;
+- newly resolved visual terms;
+- new images;
+- unresolved visual terms.
+
+14. MANDATORY RUNNING PROTOCOL FOR EACH NEW FASCICLE OR BATCH
+
+This protocol controls the order of work. Its purpose is to prevent a typo from propagating into a wrong vocabulary identifier or image basename, and to prevent unnecessary image collection.
+
+STAGE 1 — PROPOSE SUSPECTED TYPOS FIRST
+
+Before generating vocabulary content, editing the CSV, proposing basenames, searching for images, or downloading anything:
+
+1. Parse the submitted poem headings and Words sections sufficiently to identify the selected vocabulary wording and source locations.
+2. Check the submitted Words entries for suspected misspellings, transcription errors, or source-reading problems. Distinguish genuine historical spelling and attested textual variants from likely errors.
+3. Use poem context and accessible textual sources only as needed to resolve genuine uncertainty.
+4. Present a concise typo proposal table with:
+   - poem/input location;
+   - submitted wording;
+   - proposed corrected wording, if any;
+   - short reason/evidence.
+5. Do not apply any proposed correction yet.
+
+If there are one or more suspected typos, STOP after this proposal and wait for the user's decisions. The user may approve, reject, or modify each proposed correction. Only approved corrections become the working wording for later stages.
+
+If there are no suspected typos, state that clearly and continue directly to Stage 2 in the same response.
+
+Do not perform image searches or image downloads during Stage 1.
+
+STAGE 2 — PROPOSE THE VISUAL MAPPING, THEN STOP
+
+After typo decisions are settled, determine which manually selected Visuals entries correspond to eligible vocabulary identifiers.
+
+Perform only the minimal dry-run classification/extraction necessary to know the relevant English Word identifiers. Do not yet generate full definitions, translations, examples, or edit the final CSV merely to produce this proposal.
+
+Read the current /Poetry/Emily Dickinson Visuals/image_sources.md once and compare every eligible Visuals-selected term against its established terms, aliases, meanings, and stable basenames.
+
+Present a compact proposal table with at least:
+
+English Word | Proposed Image basename | Status
+
+Use Status values that make the action explicit:
+
+- REUSE — an appropriate resolved visual already exists; only its established basename will be added to the CSV.
+- NEW — no appropriate resolved visual exists; a new five-image set will be created after approval.
+
+For REUSE, show the exact existing stable basename from image_sources.md.
+
+For NEW, show the exact proposed new ed-prefixed basename that will be used if approved.
+
+When useful, add a short intended visual subject/meaning note to disambiguate species, homonyms, or multi-sense vocabulary.
+
+List any Visuals entry that cannot map to an eligible vocabulary row separately as unmatched, with a brief reason. Do not create image sets for unmatched Visuals entries.
+
+Give counts of REUSE terms, NEW terms, unmatched terms, and the expected number of new images (five per NEW term).
+
+STOP after this visual proposal. Do not search for public images, download files, modify the CSV, or create new image sets yet.
+
+Wait for the user's confirmation. The user may approve, remove, or alter candidates.
+
+STAGE 3 — START THE ACTUAL WORK ONLY AFTER EXPLICIT CONFIRMATION
+
+Only after the user explicitly confirms that the proposed visual scope should proceed:
+
+1. Apply the user's approved typo decisions.
+2. Complete the full vocabulary workflow: classification, excerpt extraction, meanings, examples, translations, capitalization, duplicate merging, and validation.
+3. Populate REUSE basenames without re-downloading or reprocessing their images.
+4. Search for and collect images only for approved NEW visual terms.
+5. Follow all context-economy, conversion, durable-saving, index, visual-review, and validation rules in section 13.
+6. Populate a NEW basename in the CSV only after its five-image set is resolved.
+7. Update the cumulative image_sources.md and current-batch NEW-file list.
+8. Build a ZIP containing only images newly added in this batch, if any.
+9. Run the final vocabulary and image validation checks and deliver the completed artifacts and concise counts.
+
+Do not silently expand the approved visual scope during execution. If a genuinely new ambiguity blocks one approved term, report that specific issue and continue with the independent approved work rather than inventing a replacement or collecting extra visuals.

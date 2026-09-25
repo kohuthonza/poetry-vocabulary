@@ -1,0 +1,1428 @@
+# Wordsworth *Prelude* Anki vocabulary — complete updated specification
+
+This is the self-contained instruction file for continuing the work. It incorporates the full original specification, all six agreed amendments, the clarification that actual corpus senses are always included, and the user's rule for reporting suspected typos after the main work. These changes are integrated into the relevant rules below; there is no separate amendment list to reconcile.
+
+Sections 1–12 and 20–22 govern CSV expansion. Sections 13–19 preserve the complete existing AnkiDroid architecture and all four card templates as a reference. Section 23 contains essential project progress and resource information. Section 24 records the efficient continuation workflow and the essential lessons from Book 2. A new conversation needs this file and the requested source CSV, not the original instruction attachment or the detailed conversations about previous books.
+
+Work on the book the user requests. CSV expansion does not itself authorise changing the card templates.
+
+## 1. Purpose
+
+The source files are existing 5-field Anki CSV files for individual books of Wordsworth's *The Prelude*.
+
+The task is to convert each source file into a semantically reviewed 9-field CSV containing **exactly five English examples per normal vocabulary entry**, and zero examples for every source row whose original example field is empty.
+
+This is **not merely a mechanical column expansion**. The additional examples should be used to review and, where useful, improve:
+
+- Word Class
+- English Explanation
+- Czech Translations
+- the original English Example
+
+Only **English Word** is an immutable identifier.
+
+---
+
+# 2. Base/source CSV format
+
+The source CSV is:
+
+1. **English Word**
+2. **Word Class**
+3. **Czech Translations**
+4. **English Explanation**
+5. **English Example**
+
+Example:
+
+```text
+"commerce","noun","styk, kontakt","communication or intercourse with others","He sought intellectual commerce with other scholars."
+
+```
+
+Technical properties:
+
+- headerless CSV
+- exactly 5 fields per row
+- UTF-8
+- standard CSV quoting
+- retain the original row order
+- merge repeated, character-for-character identical English Word values into one output row, retaining the first occurrence’s position and the useful semantic content of all merged rows (see section 22)
+
+## Important distinction between source rows
+
+There are two kinds of records, determined **strictly and exclusively by whether source field 5 is empty**. Do not infer record type from headword length, wording, punctuation, or the source Word Class. Do not speculate that a row has been misclassified.
+
+A long expression with a non-empty original example is a normal record for this workflow and receives exactly five examples. A single word with an empty original example is an empty-example record and receives zero examples.
+
+### A. Normal vocabulary records
+
+Field 5, `English Example`, is non-empty.
+
+These records must be expanded to **exactly five non-empty examples**.
+
+### B. Phrase / quotation / example records
+
+Field 5 is empty.
+
+Treat these rows as empty-example contextual records. Their wording, length, or apparent lexical type never overrides the empty original example field.
+
+**They must NOT receive generated examples.**
+
+For such a row, all five target example fields must remain empty.
+
+---
+
+# 3. Definitive target CSV format
+
+The new target files use this exact 9-field order:
+
+1. **English Word**
+2. **English Example**
+3. **English Example 2**
+4. **English Example 3**
+5. **English Example 4**
+6. **English Example 5**
+7. **Word Class**
+8. **English Explanation**
+9. **Czech Translations**
+
+Thus:
+
+```text
+English Word
+English Example
+English Example 2
+English Example 3
+English Example 4
+English Example 5
+Word Class
+English Explanation
+Czech Translations
+
+```
+
+The reason for this order is deliberate: first establish the actual usages of the word through the examples, then determine the relevant grammatical class or classes, formulate the English explanation of those senses, and finally formulate the Czech translations from that semantic context.
+
+Target filename:
+
+```text
+wordsworth_prelude_bookN_anki_5examples.csv
+
+```
+
+No additional suffix such as `_revised`, `_download`, etc.
+
+---
+
+# 4. Immutable and editable fields
+
+## English Word — absolutely immutable
+
+Field 1 is the Anki matching key.
+
+It must remain **character-for-character identical to the source CSV**.
+
+Do not:
+
+- modernize spelling
+- change capitalization
+- change singular/plural
+- replace an inflected form by a lemma
+- normalize an archaic spelling
+- alter a phrase
+- fix a suspected transcription error
+
+Examples such as:
+
+```text
+befel
+burthen
+Tither
+Wantoned
+
+```
+
+must stay exactly as supplied if they occur in `English Word`.
+
+This preserves the existing matching value for Anki imports. During the initial expansion, do not change an identifier to resolve a spelling issue. Report suspected typos after completing the main work and let the user decide what to do, as specified in section 21. After the user explicitly requests particular corrections, those exact identifier changes are authorised: apply them to the existing expanded file, update any now-obsolete explanation, and preserve all unrelated content. Previous approvals are specific to the named changes and do not authorise correcting new books automatically.
+
+## All other fields are editable
+
+Fields 2–9 should be constructed according to semantic quality.
+
+In particular, it is **wrong** to preserve Word Class, Explanation, Czech Translation, or original Example merely because they occur in the old CSV.
+
+They may remain unchanged if already good, but they should be revised if the expanded examples expose:
+
+- an incomplete definition
+- a missing important sense
+- an inaccurate Czech translation
+- an incorrect word class
+- a misleading explanation
+- an awkward example
+- a distinction between senses that the old record failed to express
+
+---
+
+# 5. Semantic workflow for a normal vocabulary record
+
+For every source row with a non-empty original example:
+
+### Step 1 — preserve English Word
+
+Copy field 1 exactly.
+
+### Step 2 — determine the relevant lexical senses
+
+Start with the sense relevant to Wordsworth/source context. Use the 1805 text when checking the surrounding passage. **Always include an actual corpus sense, even if it is archaic, rare, unusual, bizarre, or marginal.** The exclusion of marginal usages applies only to additional senses outside the corpus usage.
+
+Where identifiable, the source sense should appear in **Example 1** and as the first segment of Word Class, English Explanation, and Czech Translations. Do not guess confidently when the source sense or a suspected transcription is uncertain; handle uncertainty according to section 21.
+
+Then include **all reasonably useful additional lexical senses and grammatical uses**. Do not impose a one-, two-, three-, or five-sense limit. Exclude bizarre or extremely marginal additional usages, but do not omit an ordinary useful meaning merely because it differs from the corpus sense. Do not mechanically copy every dictionary definition or split minor contextual shades into separate senses.
+
+Normally, every included sense must be represented by at least one of the five examples. If there are **more than five distinct useful senses**, retain the additional senses in the aligned Word Class, English Explanation, and Czech Translations even when there is no example available for each of them. The example count remains exactly five. Every example must still demonstrate a sense included in the semantic fields.
+
+### Step 3 — construct five useful examples
+
+The original example can remain as Example 1 if it is good and demonstrates the source sense. Improve or replace it when necessary, including when it demonstrates a different sense from the corpus usage.
+
+Construct exactly five genuinely independent, natural sentences. Distribute them across the useful senses, prioritising the corpus sense in Example 1 where identifiable. If more than five useful senses are retained, choose representative examples without dropping the unillustrated additional senses from the semantic fields.
+
+### Step 4 — establish Word Class
+
+Word Class must correspond to all retained senses and grammatical uses, including any useful senses beyond the five-example capacity. Use the lexical class, without tense information: for example, `verb`, not `verb, past tense`.
+
+Put any helpful identification of tense, inflection, lemma, or historical spelling in English Explanation. Repeated classes such as `noun; noun` remain necessary when they represent different senses.
+
+### Step 5 — write English Explanation
+
+The explanation must describe the retained senses demonstrated by the examples, plus any additional useful senses retained under the more-than-five-senses exception. Do not define an example’s sense incorrectly or leave it unaccounted for.
+
+### Step 6 — write Czech Translations
+
+Translate all those established senses into Czech in the same order, including any useful senses beyond the five-example capacity.
+
+For ordinary verb vocabulary, normally use Czech infinitives. For full expressions, preserve the actual grammatical form and meaning in translation. Relevant inflection information belongs in English Explanation, not in Word Class.
+
+The Czech field therefore comes conceptually **after** the English explanation.
+
+---
+
+# 6. Multiple meanings and multiple word classes
+
+Use the semicolon `;` as a strict **sense separator**.
+
+The following three fields are positionally aligned:
+
+- Word Class
+- English Explanation
+- Czech Translations
+
+Each semicolon-delimited segment represents one distinct lexical sense/use.
+
+## Example: different word classes
+
+```text
+English Word:
+figure
+
+Word Class:
+noun; verb
+
+English Explanation:
+a person, shape, or representation; to decorate something with a pattern or design
+
+Czech Translations:
+postava, figura, vyobrazení; zdobit vzorem, vzorovat
+
+```
+
+Segment 1 corresponds across all three fields.
+
+Segment 2 corresponds across all three fields.
+
+## Example: different meanings with the same word class
+
+```text
+English Word:
+commerce
+
+Word Class:
+noun; noun
+
+English Explanation:
+trade or exchange of goods; communication, intercourse, or intellectual exchange between people
+
+Czech Translations:
+obchod; styk, kontakt, duchovní výměna
+
+```
+
+Repeating `noun; noun` is intentional.
+
+It preserves exact positional correspondence.
+
+## Separator rules
+
+Use:
+
+```text
+,
+
+```
+
+for alternatives or closely related formulations **inside one sense**.
+
+Use:
+
+```text
+;
+
+```
+
+only to separate **independent senses/usages**.
+
+Therefore:
+
+```text
+pozůstatek, zbytek, stopa
+
+```
+
+is one sense.
+
+But:
+
+```text
+obchod; styk, kontakt
+
+```
+
+represents two senses.
+
+### Strict alignment rule
+
+If Word Class has 3 semicolon-separated segments, English Explanation and Czech Translations should also have 3 corresponding segments.
+
+For example:
+
+```text
+noun; noun; verb
+sense 1; sense 2; sense 3
+translation 1; translation 2; translation 3
+
+```
+
+Do not use semicolons merely as stylistic punctuation inside one definition.
+
+---
+
+# 7. When NOT to split senses
+
+Do not create separate semicolon segments merely because the five examples use the word in somewhat different circumstances.
+
+Closely related shades of one lexical meaning remain one sense.
+
+For example, if all five uses of `vestige` mean approximately:
+
+> a small surviving trace or remainder of something
+
+then one definition and one Czech segment are sufficient even if the examples concern:
+
+- a ruined wall
+- an accent
+- an ancient custom
+- hesitation
+- a vanished settlement
+
+A new semicolon segment is justified when there is a real lexical distinction comparable to a separate dictionary sense.
+
+---
+
+# 8. Example-generation quality requirements
+
+This is critical.
+
+The purpose of five examples is to expose **different real uses of the word**, not to manufacture five superficially different sentences.
+
+## NEVER create variants like this
+
+```text
+His precipitate decision caused problems.
+At the time, his precipitate decision caused problems.
+In practice, his precipitate decision caused problems.
+Years later, his precipitate decision caused problems.
+Even then, his precipitate decision caused problems.
+
+```
+
+These are effectively one example repeated five times.
+
+Do not generate diversity merely by adding generic wrappers such as:
+
+```text
+At the time,
+In practice,
+Years later,
+In another context,
+Even so,
+In the scene,
+Later,
+In this case,
+
+```
+
+This failure occurred in earlier Book IX/X expansions and must not be repeated.
+
+## Genuine variability
+
+Examples 1–5 should differ where possible in:
+
+- situation
+- collocation
+- grammatical construction
+- syntactic environment
+- register
+- subject/object type
+- literal versus extended use
+- or distinct lexical sense
+
+For a word with several relevant meanings, distribute the examples across those meanings.
+
+For a word with only one relevant meaning, demonstrate different natural environments for that same meaning.
+
+### Good example of one sense with varied contexts
+
+For `dwindle`:
+
+```text
+Their supplies began to dwindle.
+Attendance dwindled as the weather worsened.
+His savings quickly dwindled after he lost his job.
+The stream dwindles to a trickle in late summer.
+Their hopes dwindled with each passing day.
+
+```
+
+These all belong to the same broad sense, but demonstrate different natural objects and constructions.
+
+### Good example of multiple senses
+
+If a word genuinely has two useful senses, the five examples should make both senses visible.
+
+Every sense included in Word Class, English Explanation, and Czech Translations must normally be represented by at least one example. If more than five genuinely useful senses exist, additional senses may remain unillustrated, but must still have positionally aligned segments in all three fields. Exactly five examples are still required.
+
+Conversely, **every example, without exception, must demonstrate a sense included in the explanation and Czech translation**. Do not force extra sentences into one example field simply to evade the five-example limit.
+
+---
+
+# 9. Example-writing style
+
+Examples should be:
+
+- natural standalone English sentences
+- concise enough for Anki
+- semantically transparent
+- sufficiently varied
+- grammatically complete where appropriate
+- free of unnecessary literary interpretation
+- free of generic framing added merely to manufacture difference
+
+Inflection is allowed naturally.
+
+For example, an entry `glean` can contain:
+
+```text
+She gleaned useful information from casual conversations.
+Historians can glean much from household accounts.
+
+```
+
+The headword does not have to appear in exactly the same morphological form in all five examples.
+
+Prefer normal idiomatic English rather than sentences artificially constructed only to contain the vocabulary word. Historical constructions may require appropriately literary examples, but the sentences must remain intelligible and useful.
+
+Every entry must stand alone. Separate vocabulary entries must not rely on a longer-expression entry or say only “as in the phrase above.” If a long expression qualifies for five examples because its original example field is non-empty, apply the same genuine-variation standard to it; do not substitute five metalinguistic comments or superficial wrappers for real usage examples.
+
+---
+
+# 10. Special phrase / quotation records
+
+If the original source field 5 (`English Example`) is empty, the entry belongs to the empty-example workflow, regardless of what the English Word field looks like. Use the original example field alone for classification.
+
+For such rows:
+
+```text
+English Example   = ""
+English Example 2 = ""
+English Example 3 = ""
+English Example 4 = ""
+English Example 5 = ""
+
+```
+
+Do not invent examples.
+
+The expression in `English Word` is already the material being studied.
+
+Its:
+
+- Word Class
+- English Explanation
+- Czech Translations
+
+may still be corrected or improved if useful.
+
+For longer expressions, the explanation should remain linguistic:
+
+- syntax
+- idiom
+- archaic usage
+- unusual lexical sense
+- translation nuance
+
+Do not introduce unnecessary literary interpretation.
+
+---
+
+# 11. Validation requirements
+
+Before delivering each expanded CSV, verify:
+
+### Structural validation
+
+- same number of rows as source, except for required duplicate merges or additions/deletions explicitly requested by the user
+- same original row order, retaining the first occurrence’s position for a merged duplicate
+- exactly 9 fields per output row
+- no header
+- UTF-8
+- valid CSV quoting
+- no repeated English Word values in the delivered file
+- exact required output filename, with no extra suffix
+- document the counts of input rows, output rows, duplicate merges, normal records, and empty-example records
+
+### Identity validation
+
+For every retained source identifier:
+
+```text
+target English Word == source English Word
+```
+
+exactly. For a merged duplicate, the common identifier remains unchanged. No suspected typo permits an identifier change, deleted row, or additional corrected row without the user's subsequent instruction.
+
+### Blank-record validation
+
+For every source row whose original Example field is empty:
+
+```text
+target fields 2–6 are all empty
+
+```
+
+### Normal-vocabulary validation
+
+For every source row with an original example:
+
+- all five target example fields are non-empty
+- examples are genuinely distinct
+- no generic prefix/wrapper variants
+- each listed sense appears in an example unless the row retains more than five useful senses, in which case unillustrated additional senses are allowed
+- every example demonstrates a listed sense
+- Example 1 and the first semantic segment reflect the source sense where identifiable
+- no actual corpus sense has been excluded merely because it is rare or marginal
+- no tense information appears in Word Class
+- Word Class / Explanation / Czech segments correspond positionally
+- Czech translations reflect all retained English senses, including any additional senses beyond the five-example capacity
+
+### Semantic separator validation
+
+Where semicolons are used, verify that the number and ordering of sense segments agree across:
+
+```text
+Word Class
+English Explanation
+Czech Translations
+
+```
+
+---
+
+# 12. Anki note field order
+
+The Anki note type should preferably use the same convenient order as the target CSV:
+
+```text
+English Word
+English Example
+English Example 2
+English Example 3
+English Example 4
+English Example 5
+Word Class
+English Explanation
+Czech Translations
+
+```
+
+`English Word` remains the matching/identity field.
+
+CSV column order itself does not have to equal Anki's internal field order because import mapping can map columns manually, but keeping both in the same order is convenient.
+
+---
+
+# 13. Current AnkiDroid TTS architecture
+
+There are two cards.
+
+## Card 1 — English → Czech
+
+Front:
+
+1. selected English example
+2. English Word
+3. Word Class
+4. automatically speak selected example
+5. then automatically speak English Word
+
+Back:
+
+1. same selected example
+2. English Word
+3. Word Class
+4. Czech Translation
+5. English Explanation
+6. replay controls remain available
+
+Do **not** use `{{FrontSide}}` on Card 1 back because it would rerender the randomized front.
+
+The same example is independently reconstructed on front and back using deterministic selection from:
+
+```text
+card ID + repetition count
+
+```
+
+## Card 2 — Czech → English
+
+Front:
+
+1. Czech Translations
+2. Word Class
+
+Back:
+
+1. `{{FrontSide}}`
+2. selected English example
+3. English Word
+4. Word Class
+5. English Explanation
+6. automatically speak selected example
+7. then automatically speak English Word
+
+Using `{{FrontSide}}` here is safe because Card 2 front contains no randomized example or automatic English TTS.
+
+---
+
+# 14. Important AnkiDroid technical rules
+
+Native Anki autoplay must be disabled.
+
+If all five `{{tts ...}}` fields are present and native autoplay is enabled, Anki queues all five audio items before JavaScript hides four of them.
+
+The templates instead click the native Anki replay buttons through JavaScript.
+
+Use:
+
+```javascript
+".replaybutton, .replay-button, .soundLink"
+
+```
+
+Do not use browser:
+
+```javascript
+window.speechSynthesis
+
+```
+
+It did not work reliably in AnkiDroid.
+
+Do not reintroduce:
+
+- `sessionStorage`
+- `localStorage`
+- front/back timing markers
+
+They were unnecessary and unreliable.
+
+---
+
+# 15. Current AnkiDroid JavaScript API
+
+Use API version:
+
+```javascript
+const api = AnkiDroidJS.init({
+    version: "0.0.3",
+    developer: "local-template"
+});
+
+```
+
+Methods are asynchronous and return wrapper objects.
+
+Correct:
+
+```javascript
+const cardIdResult = await api.ankiGetCardId();
+const repsResult = await api.ankiGetCardReps();
+
+const cardId = cardIdResult.value;
+const reps = repsResult.value;
+
+```
+
+Do NOT hash the wrapper objects themselves.
+
+Selection seed:
+
+```javascript
+const seed =
+    String(cardId) + ":" + String(reps);
+
+```
+
+Hash:
+
+```javascript
+function hashString(str) {
+    let hash = 2166136261;
+
+    for (let i = 0; i < str.length; i++) {
+        hash ^= str.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+    }
+
+    return hash >>> 0;
+}
+
+```
+
+Selection:
+
+```javascript
+const index =
+    hashString(seed) % options.length;
+
+```
+
+Thus the same card/repetition gets the same example on front and back.
+
+A later review gets a new seed.
+
+Adjacent reviews may naturally select the same example because modulo selection is not designed to forbid repeats.
+
+---
+
+# 16. Card 1 FRONT — current template including no-example fix
+
+```html
+<style>
+.example-option {
+    display: none;
+}
+</style>
+
+<div id="examples">
+
+{{#English Example}}
+<div class="example-option">
+    <div class="word example-text">{{English Example}}</div>
+    <span class="example-audio">{{tts en_GB:English Example}}</span>
+</div>
+{{/English Example}}
+
+{{#English Example 2}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 2}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 2}}</span>
+</div>
+{{/English Example 2}}
+
+{{#English Example 3}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 3}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 3}}</span>
+</div>
+{{/English Example 3}}
+
+{{#English Example 4}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 4}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 4}}</span>
+</div>
+{{/English Example 4}}
+
+{{#English Example 5}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 5}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 5}}</span>
+</div>
+{{/English Example 5}}
+
+</div>
+
+<div class="word">
+    {{English Word}}
+    <span id="word-audio">
+        {{tts en_GB:English Word}}
+    </span>
+</div>
+
+<div class="pos">{{Word Class}}</div>
+
+<div id="review-number"
+     style="font-size: 12px; opacity: 0.5; margin-top: 8px;">
+</div>
+
+<script>
+(async function () {
+
+    const options = Array.from(
+        document.querySelectorAll("#examples .example-option")
+    );
+
+    /*
+     * IMPORTANT NO-EXAMPLE FIX:
+     *
+     * A phrase/quotation record has no generated examples.
+     * It must still automatically pronounce English Word.
+     */
+    if (!options.length) {
+
+        setTimeout(function () {
+
+            const wordButton =
+                document
+                    .getElementById("word-audio")
+                    ?.querySelector(
+                        ".replaybutton, .replay-button, .soundLink"
+                    );
+
+            if (wordButton) {
+                wordButton.click();
+            }
+
+        }, 300);
+
+        return;
+    }
+
+    const api = AnkiDroidJS.init({
+        version: "0.0.3",
+        developer: "local-template"
+    });
+
+    const cardIdResult = await api.ankiGetCardId();
+    const repsResult = await api.ankiGetCardReps();
+
+    const cardId = cardIdResult.value;
+    const reps = repsResult.value;
+
+    document.getElementById("review-number").textContent =
+        "Review: " + reps;
+
+    function hashString(str) {
+        let hash = 2166136261;
+
+        for (let i = 0; i < str.length; i++) {
+            hash ^= str.charCodeAt(i);
+            hash = Math.imul(hash, 16777619);
+        }
+
+        return hash >>> 0;
+    }
+
+    const seed =
+        String(cardId) + ":" + String(reps);
+
+    const index =
+        hashString(seed) % options.length;
+
+    const chosen = options[index];
+
+    chosen.style.display = "block";
+
+    function getAudioButton(element) {
+        if (!element) return null;
+
+        return element.querySelector(
+            ".replaybutton, .replay-button, .soundLink"
+        );
+    }
+
+    setTimeout(function () {
+
+        const exampleButton =
+            getAudioButton(chosen);
+
+        if (exampleButton) {
+            exampleButton.click();
+        }
+
+        const text =
+            chosen
+                .querySelector(".example-text")
+                .textContent
+                .trim();
+
+        const words =
+            text.split(/\s+/).filter(Boolean).length;
+
+        const delay =
+            Math.max(
+                1800,
+                (words / 2.5) * 1000 + 700
+            );
+
+        setTimeout(function () {
+
+            const wordButton =
+                getAudioButton(
+                    document.getElementById("word-audio")
+                );
+
+            if (wordButton) {
+                wordButton.click();
+            }
+
+        }, delay);
+
+    }, 300);
+
+})();
+</script>
+
+```
+
+The example→word interval is deliberately an estimated duration based on word count:
+
+```javascript
+Math.max(
+    1800,
+    (words / 2.5) * 1000 + 700
+)
+
+```
+
+It is not based on an actual exposed TTS-completion callback.
+
+This currently works reasonably and should not be replaced with a more complicated mechanism unless specifically requested.
+
+---
+
+# 17. Card 1 BACK — deterministic same-example logic
+
+Card 1 back must not use `{{FrontSide}}`.
+
+```html
+<style>
+.example-option {
+    display: none;
+}
+</style>
+
+<div id="examples">
+
+{{#English Example}}
+<div class="example-option">
+    <div class="word example-text">{{English Example}}</div>
+    <span class="example-audio">{{tts en_GB:English Example}}</span>
+</div>
+{{/English Example}}
+
+{{#English Example 2}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 2}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 2}}</span>
+</div>
+{{/English Example 2}}
+
+{{#English Example 3}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 3}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 3}}</span>
+</div>
+{{/English Example 3}}
+
+{{#English Example 4}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 4}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 4}}</span>
+</div>
+{{/English Example 4}}
+
+{{#English Example 5}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 5}}</div>
+    <span class="example-audio">{{tts en_GB:English Example 5}}</span>
+</div>
+{{/English Example 5}}
+
+</div>
+
+<div class="word">
+    {{English Word}}
+    <span id="word-audio">
+        {{tts en_GB:English Word}}
+    </span>
+</div>
+
+<div class="pos">{{Word Class}}</div>
+
+<div class="word">
+    {{Czech Translations}}
+</div>
+
+<div class="explanation">
+    <b>Explanation:</b> {{English Explanation}}
+</div>
+
+<script>
+(async function () {
+
+    const options = Array.from(
+        document.querySelectorAll("#examples .example-option")
+    );
+
+    if (!options.length) {
+        return;
+    }
+
+    const api = AnkiDroidJS.init({
+        version: "0.0.3",
+        developer: "local-template"
+    });
+
+    const cardIdResult = await api.ankiGetCardId();
+    const repsResult = await api.ankiGetCardReps();
+
+    const cardId = cardIdResult.value;
+    const reps = repsResult.value;
+
+    function hashString(str) {
+        let hash = 2166136261;
+
+        for (let i = 0; i < str.length; i++) {
+            hash ^= str.charCodeAt(i);
+            hash = Math.imul(hash, 16777619);
+        }
+
+        return hash >>> 0;
+    }
+
+    const seed =
+        String(cardId) + ":" + String(reps);
+
+    const index =
+        hashString(seed) % options.length;
+
+    options[index].style.display = "block";
+
+})();
+</script>
+
+```
+
+Card 1 back does not automatically replay the audio again. Replay buttons remain available.
+
+---
+
+# 18. Card 2 FRONT
+
+```html
+<div class="word">
+    {{Czech Translations}}
+</div>
+
+<div class="pos">{{Word Class}}</div>
+
+<div id="review-number"
+     style="font-size: 12px; opacity: 0.5; margin-top: 8px;">
+</div>
+
+<script>
+(async function () {
+
+    const api = AnkiDroidJS.init({
+        version: "0.0.3",
+        developer: "local-template"
+    });
+
+    const repsResult = await api.ankiGetCardReps();
+    const reps = repsResult.value;
+
+    document.getElementById("review-number").textContent =
+        "Review: " + reps;
+
+})();
+</script>
+
+```
+
+---
+
+# 19. Card 2 BACK — current template including no-example fix
+
+```html
+<style>
+.example-option {
+    display: none;
+}
+</style>
+
+{{FrontSide}}
+
+<hr id="answer">
+
+<div id="examples">
+
+{{#English Example}}
+<div class="example-option">
+    <div class="word example-text">{{English Example}}</div>
+    <span class="example-audio">
+        {{tts en_GB:English Example}}
+    </span>
+</div>
+{{/English Example}}
+
+{{#English Example 2}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 2}}</div>
+    <span class="example-audio">
+        {{tts en_GB:English Example 2}}
+    </span>
+</div>
+{{/English Example 2}}
+
+{{#English Example 3}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 3}}</div>
+    <span class="example-audio">
+        {{tts en_GB:English Example 3}}
+    </span>
+</div>
+{{/English Example 3}}
+
+{{#English Example 4}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 4}}</div>
+    <span class="example-audio">
+        {{tts en_GB:English Example 4}}
+    </span>
+</div>
+{{/English Example 4}}
+
+{{#English Example 5}}
+<div class="example-option">
+    <div class="word example-text">{{English Example 5}}</div>
+    <span class="example-audio">
+        {{tts en_GB:English Example 5}}
+    </span>
+</div>
+{{/English Example 5}}
+
+</div>
+
+<div class="word">
+    {{English Word}}
+    <span id="word-audio">
+        {{tts en_GB:English Word}}
+    </span>
+</div>
+
+<div class="pos">{{Word Class}}</div>
+
+<div class="explanation">
+    <b>Explanation:</b> {{English Explanation}}
+</div>
+
+<script>
+(async function () {
+
+    const options = Array.from(
+        document.querySelectorAll("#examples .example-option")
+    );
+
+    /*
+     * IMPORTANT NO-EXAMPLE FIX:
+     *
+     * Phrase/quotation records still need English Word autoplay.
+     */
+    if (!options.length) {
+
+        setTimeout(function () {
+
+            const wordButton =
+                document
+                    .getElementById("word-audio")
+                    ?.querySelector(
+                        ".replaybutton, .replay-button, .soundLink"
+                    );
+
+            if (wordButton) {
+                wordButton.click();
+            }
+
+        }, 300);
+
+        return;
+    }
+
+    const api = AnkiDroidJS.init({
+        version: "0.0.3",
+        developer: "local-template"
+    });
+
+    const cardIdResult = await api.ankiGetCardId();
+    const repsResult = await api.ankiGetCardReps();
+
+    const cardId = cardIdResult.value;
+    const reps = repsResult.value;
+
+    function hashString(str) {
+        let hash = 2166136261;
+
+        for (let i = 0; i < str.length; i++) {
+            hash ^= str.charCodeAt(i);
+            hash = Math.imul(hash, 16777619);
+        }
+
+        return hash >>> 0;
+    }
+
+    const seed =
+        String(cardId) + ":" + String(reps);
+
+    const index =
+        hashString(seed) % options.length;
+
+    const chosen = options[index];
+
+    chosen.style.display = "block";
+
+    function getAudioButton(element) {
+        if (!element) return null;
+
+        return element.querySelector(
+            ".replaybutton, .replay-button, .soundLink"
+        );
+    }
+
+    setTimeout(function () {
+
+        const exampleButton =
+            getAudioButton(chosen);
+
+        if (exampleButton) {
+            exampleButton.click();
+        }
+
+        const text =
+            chosen
+                .querySelector(".example-text")
+                .textContent
+                .trim();
+
+        const words =
+            text.split(/\s+/).filter(Boolean).length;
+
+        const delay =
+            Math.max(
+                1800,
+                (words / 2.5) * 1000 + 700
+            );
+
+        setTimeout(function () {
+
+            const wordButton =
+                getAudioButton(
+                    document.getElementById("word-audio")
+                );
+
+            if (wordButton) {
+                wordButton.click();
+            }
+
+        }, delay);
+
+    }, 300);
+
+})();
+</script>
+
+```
+
+---
+
+# 20. Critical migration summary
+
+When converting an old Book CSV to the new format, do **not** treat the old semantic fields as authoritative.
+
+The correct conceptual workflow is:
+
+```text
+immutable English Word
+        ↓
+identify useful lexical senses
+        ↓
+create/review five genuinely varied examples
+        ↓
+derive aligned Word Class
+        ↓
+derive English Explanation
+        ↓
+derive Czech Translations
+
+```
+
+The old data is a starting point, not something to preserve mechanically.
+
+The only absolutely invariant value is:
+
+```text
+English Word
+
+```
+
+The empty-example rule is:
+
+```text
+old Example empty
+→ this is already an example/quotation record
+→ generate no additional examples
+→ all five target example fields remain empty
+
+```
+
+The main quality failure to avoid is **pseudo-variation**: never manufacture four “new” examples by merely adding generic introductory phrases to the original sentence.
+
+Preserve the actual corpus meaning even when rare. Include all reasonably useful additional meanings, with no arbitrary cap. If more than five useful senses exist, keep their aligned class, explanation, and Czech segments even when some lack examples. Merge exact duplicate identifiers as described below. Complete the main work before reporting suspected typos for the user's decision.
+
+---
+
+# 21. Suspected typos and transcription discrepancies
+
+This is the user's explicit decision workflow:
+
+1. **Preserve the recorded English Word exactly.** Do not silently correct its spelling, replace it with another word, remove it, or insert a corrected-word row.
+2. Check the relevant corpus passage when needed to understand the discrepancy. Distinguish genuine historical spelling from a possible transcription error. Do not label an unfamiliar historical form a typo simply because it is unfamiliar.
+3. Complete the main book expansion and its validation without pausing to request decisions about suspected typos. Continue applying the original-example classification rule.
+4. If the supplied headword is a valid word but differs from the likely intended corpus word, do not silently assign the other word's meanings to it. Preserve a truthful explanation of the supplied entry. If an apparent nonstandard form must be explained using a likely intended form, identify that relationship and any uncertainty explicitly in English Explanation; do not change the identifier.
+5. **With the completed deliverable, report every suspected typo or transcription discrepancy found.** Give the book/source row, exact supplied identifier, likely intended form, and a short reason or relevant source evidence. Distinguish a probable typo from an uncertain reading. Keep this report separate from the CSV structure; do not add a tenth column or a header.
+6. **The user decides manually after the main work what, if anything, should be changed.** Do not treat silence or agreement that something looks unusual as permission for a specific edit or added row. Apply a correction, replacement, deletion, or addition only when subsequently requested.
+7. A later requested addition can be made in the same expanded file. Preserve all unrelated entries and the required filename, then validate the changed file.
+
+The Book 1 addition of `oars` was specifically requested after the user confirmed that `oats` was a typo. It is not blanket permission to add corrected rows in later books.
+
+---
+
+# 22. Duplicate merging, delivery, and continuation
+
+## Duplicate identifiers
+
+Multiple output rows with exactly the same first-column value must not remain. Compare identifiers character for character; do not normalise case, whitespace, spelling, or inflection to manufacture matches.
+
+When an exact duplicate occurs, merge the useful semantic content into one record at the first occurrence's position. Do not simply discard a later row if it contains a different useful sense, translation nuance, or relevant corpus usage. Give a merged normal record exactly five examples in total, not five per source occurrence. Apply the same sense-coverage, alignment, and quality rules.
+
+Record which source rows were merged and reconcile the output row count accordingly. Duplicate merging does not authorise correcting the shared identifier or changing unrelated records.
+
+## Deliverable
+
+Return the expanded CSV under `wordsworth_prelude_bookN_anki_5examples.csv`. Keep the supplied base CSV intact when producing this separately named output. Save requested changes to an already-created expanded file as an update to that same file rather than creating needless suffixed copies.
+
+Provide a concise completion note with row/example counts and any duplicate merges, plus the post-work typo report when applicable. Do not claim automated checks prove semantic correctness: review meaning, grammar, example variety, sense coverage, and Czech correspondence directly.
+
+## Scope
+
+Process the requested book. Do not start another book solely because its source file is available. Use the current source file and this complete specification; previous generated examples and old tool output are not required context for the next book.
+
+---
+
+# 23. Essential project state and resources
+
+## Completed work
+
+- Book 1 source: 182 rows, no duplicate headwords, and a non-empty original example in every row, including long expressions. Check later books independently; do not generalise these counts or classifications.
+- Book 1 was expanded and reviewed. After delivery, the user confirmed `oats` was a typo for `oars` and requested an **extra** row, retaining `oats`. The new `oars` row was inserted immediately after `oats`.
+- Book 1 at the initial completion recorded here: **183 entries, 915 examples**, filename `wordsworth_prelude_book1_anki_5examples.csv`. Later user-authorised edits have been made in its own conversation, so these are historical completion counts, not a current inventory. Consult the current Book 1 file only if Book 1 work is requested.
+- Book 2 source: **153 rows**, comprising **84 normal vocabulary records** and **69 empty-example records**, with no exact duplicate identifiers. Initial expansion produced **420 examples**.
+- Final Book 2 after the user-authorised corrections: **152 entries, 420 examples**, comprising **84 normal records** and **68 empty-example records**, filename `wordsworth_prelude_book2_anki_5examples.csv`. The redundant empty-example `Interveniant` row was removed in favour of the existing five-example `intervenient` entry. There are no repeated identifiers.
+- **Book 3 is next** under this reviewed workflow. Do not treat older generated files for later books, if present, as proof that they meet this specification.
+
+## Lessons needed for subsequent books
+
+- Existing semantic fields can contain real errors, so review them against context rather than preserving them automatically. Book 1 exposed both syntax and vocabulary-sense errors. The individual Book 1 entries need not be carried into the next book's active working context.
+- Historical spellings and probable typos must be distinguished. Preserve identifiers and report suspected typos after the main work under section 21.
+- Similarity checks can flag repetitive examples, but semantic review must decide whether variation is genuine and meanings are correctly covered.
+- Broad headwords can have more than five useful senses. This is an allowed case, not a reason to discard useful meanings or misalign the semantic fields.
+
+## Files and text reference
+
+- Sources were uploaded for Books 1–13, named `wordsworth_prelude_book1_anki.csv` through `wordsworth_prelude_book13_anki.csv`.
+- Completed outputs and this instruction file are in `Poetry/Prelude-expanded`.
+- This file, `prelude_csv_working_brief.md`, now contains the **full updated specification**, despite retaining its earlier filename. Its earlier shorter content has been replaced. The original instruction attachment is not required to continue.
+- Corpus reference: [The Prelude of 1805, in thirteen books](https://viscomi.sites.oasis.unc.edu/viscomi/coursepack/wordsworth/Prelude1805.pdf).
+- For Book 3, provide this complete instruction file and `wordsworth_prelude_book3_anki.csv`. Earlier completed CSVs are unnecessary unless an edit or comparison of those books is requested. File references do not substitute for making the required source bytes available to the new conversation.
+
+
+---
+
+# 24. Book 2 lessons and efficient continuation
+
+## Proportionate research and review
+
+The user explicitly prefers a focused workflow. The base CSV, the relevant book of the 1805 text, a few good dictionary sources, and independently composed examples should normally suffice. Book 1 took about thirty minutes, which the user considered excessive, with too much searching. This is a preference for proportionate work, not permission to weaken semantic review or omit useful senses.
+
+1. Read this brief and inspect the requested base CSV once. Count normal and empty-example rows from the original example field, and check exact duplicate identifiers.
+2. Read the relevant book or passages in the 1805 reference. Keep that text available and use it for context instead of repeatedly searching for individual lines.
+3. Use established lexical knowledge for straightforward entries and compose original, natural examples. Consult reliable dictionaries for genuinely uncertain, archaic, unusual, or disputed senses and constructions. Batch independent lookups when useful. Do not conduct an exhaustive web search for every word or search for five ready-made examples.
+4. Review the semantic fields alongside the examples. Verify context-sensitive senses and grammar, Czech correspondence, real example variety, and coverage of useful meanings. Common additional meanings may belong to a different word class. Retain the more-than-five-senses exception where needed.
+5. Perform one compact structural validation and a direct semantic review. Use additional checks only to resolve a concrete remaining issue. Automated counts or similarity checks cannot establish semantic correctness.
+6. Complete and save the book, then report suspected typos or uncertain readings separately. Do not pause the main expansion to ask about them. Do not start the next book without a request.
+
+Useful dictionary starting points include [Merriam-Webster](https://www.merriam-webster.com/), [Cambridge Dictionary](https://dictionary.cambridge.org/), and [Collins](https://www.collinsdictionary.com/). Choose the source appropriate to the uncertainty, especially for historical usage. Dictionary citations and discrepancy reports must not introduce extra CSV columns.
+
+## Transferable language and source lessons
+
+- **Read beyond the recorded fragment.** A line break can separate an auxiliary from its participle or a conditional result from its if-clause. Book 2 examples included `Duly were our games` continuing with `prolonged`, and `were I ...` meaning `I would be ...` in its actual sentence, rather than automatically `if I were ...`.
+- **Do not infer an archaic construction from its modern-looking parts.** For example, `or ere` means `before`. Preserve the actual source sense and explain it briefly.
+- **Distinguish historical spellings, edition differences, and probable transcription errors.** The user reads the 1805 text in Oxford Major Works. The reference PDF is a context aid, not authority to override a reading the user confirms in that edition. `huxter` and `controul` are historical spellings. Describe uncertain discrepancies as discrepancies, not proven typos.
+- **Classify each book afresh.** Unlike the original Book 1 source, Book 2 contained many empty-example rows. Neither the length of a headword nor the previous book's record types changes the original-example rule.
+- **Keep quotation explanations linguistic and concise.** Explain syntax, vocabulary, historical usage, and translation nuance without adding literary interpretation. Ordinary vocabulary entries must still stand alone.
+
+## Exact matching and later corrections
+
+For this CSV workflow, English Word is the matching field. Straight `'` (U+0027) and curly `’` (U+2019) are different characters: use the same character in the CSV and the user's Anki field. Do not normalise apostrophes, case, spacing, or spelling across unrelated records. Book 2's approved identifier is exactly `'Twere long to tell`, with a straight apostrophe, matching the user's phone edit. See [Anki's duplicate/update rules](https://docs.ankiweb.net/importing/text-files.html#duplicates-and-updating).
+
+When the user has already corrected particular Anki records and explicitly requests matching CSV edits, make those changes without another confirmation. Preserve the filename and update the same expanded artifact in place. Remove resolved typo notes from explanations. If a corrected entry duplicates an existing entry and the user requests a merge or deletion, preserve any useful content and reconcile counts. This does not grant general authority to change other identifiers.
+
+## Book 2 decisions already settled
+
+The numbers below refer to the **original 153-row source**, not the final CSV: removal of original row 77 shifted later row positions. These decisions are recorded to prevent reopening settled issues if Book 2 is revisited, not as examples to copy into Book 3.
+
+| Original row | Final decision |
+| --- | --- |
+| 8 | `Tither I repaired` → `Thither I repaired`. |
+| 12 | `And watch her Table...` → `And watched her Table...`, retaining `huxter's` and all other identifier wording. |
+| 77–78 | Remove `Interveniant`, retaining the existing normal `intervenient` record and its five examples. Its useful secondary/intermediate sense is covered there. |
+| 97 | The user confirmed `the infant sensibility` is correct. Retain it and remove the discrepancy warning. |
+| 118 | `Vernal trush` → `Vernal thrush`. |
+| 121 | `Twere long to tell` → `'Twere long to tell`, with a straight apostrophe. |
+| 122 | `observations of affinities` → `observation of affinities`. |
+| 130 | Final identifier: `Were I grossly destitute of all those human sentiments`. Both `We're` → `Were` and, subsequently, `humans` → `human` were explicitly approved. |
+| 140 | Retain `Reaction and depravity` although the user confirmed it is not from Book 2. Keep it as an empty-example record. |
+
+Book 2 is complete. To continue with Book 3, use the full rules above, this concise experience summary, the Book 3 base CSV, and the relevant source text. The detailed Book 1 and Book 2 conversations and generated examples are not required.
