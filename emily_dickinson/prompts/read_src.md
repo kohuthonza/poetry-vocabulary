@@ -39,6 +39,8 @@ Consult [reconciliation.md](../reconciliation.md) only for active unresolved con
 
 Use the common rules for approved typo corrections, capitalization, five-example standard entries, empty-example excerpts, mandatory extraction, independent explanations and aligned Czech translations. Retain poem context for extracted entries and duplicate merges. Do not silently substitute another edition's wording or modernize historical forms.
 
+Apply the same capitalization normalization to each processed Words line in src as to its displayed Anki English Word. Preserve required capitals such as I, Pleiad and Ghent; keep poem headings and other metadata unchanged. Verify vocabulary and normalized source before starting any image searches or downloads, following the common workflow's images-last order.
+
 Only manually selected Visuals concepts qualify. Visuals normally use the singular form of a word contained in the poem's vocabulary. Assign each to the closest matching entry: prefer the same standalone word (including a relevant extracted entry), then the closest phrase containing it, allowing capitalization and singular/plural differences. For example, Robin matches crimson robin. Report actual missing terms or ambiguous matches; do not create vocabulary solely from Visuals.
 
 Normalize Visuals labels to lowercase and use the established image-index subject label when a same-meaning alias is present, for example laurels → laurel. Keep existing basenames and media filenames unchanged. Normalize Moods labels to lowercase as well, including comma-separated mood labels. Preserve headings, metadata such as Sent, and required capitals in Words, such as Pleiad and Ghent. Metadata normalization alone does not request Anki processing of later fascicles.

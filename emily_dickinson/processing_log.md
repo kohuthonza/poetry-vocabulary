@@ -57,8 +57,6 @@ Emily Dickinson::02 Fascicle II ->
 2,4,5 - Once more, my now bewildered Dove
 2,4,6 - Baffled for just day or two
 
-## Proposed
-
 Emily Dickinson::03 Fascicle III ->
 3,1,1 - Delayed till she had ceased to know -
 3,1,2 - Some things that fly there be -
@@ -84,6 +82,8 @@ Emily Dickinson::03 Fascicle III ->
 3,4,4 - Sleep is supposed to be
 3,4,5 - If I should die -
 3,4,6 - By Chivalries as tiny,
+
+## Proposed
 
 Emily Dickinson::04 Fascicle IV ->
 4,1,1 - Perhaps you'd like to buy a flower,

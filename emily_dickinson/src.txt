@@ -487,9 +487,9 @@ Moods:
 
 3,1,1 - Delayed till she had ceased to know -
 Words:
-Delayed till she had ceased to know
-Bosom
-Meek apparreled thing
+delayed till she had ceased to know
+bosom
+meek apparreled thing
 Visuals:
 Moods:
 philosophical
@@ -500,17 +500,17 @@ SD
 
 3,1,2 - Some things that fly there be -
 Words:
-Elegy
-Behooveth me
-Expound the skies
+elegy
+behooveth me
+expound the skies
 Visuals:
 Moods:
 
 3,1,3 - Within my reach!
 Words:
-Soft sauntered thro' the village
-Unsuspected Violets
-Striving fingers
+soft sauntered thro' the village
+unsuspected violets
+striving fingers
 Visuals:
 violet
 Moods:
@@ -518,11 +518,11 @@ jolly
 
 3,1,4 - So bashful when I spied her!
 Words:
-Bashful
-Leaflets
-Haunts
-Dingle
-Dell
+bashful
+leaflets
+haunts
+dingle
+dell
 Visuals:
 Moods:
 erotic
@@ -531,22 +531,22 @@ secretive
 
 3,1,5 - My friend must be a Bird -
 Words:
-Barbs
+barbs
 Visuals:
 Moods:
 
 3,1,6 - Went up a year this evening!
 Words:
-Went up a year this evening
-Bravoes
-Tranquil
-Chastened
-Alluded
-Gales propitious
-Boquet
-Beguiling
-Hands bustled at the moorings
-Daisy
+went up a year this evening
+bravoes
+tranquil
+chastened
+alluded
+gales propitious
+boquet
+beguiling
+hands bustled at the moorings
+daisy
 Visuals:
 daisy
 Moods:
@@ -554,51 +554,51 @@ transcendental
 
 3,2,1 - Angels, in the early morning
 Words:
-Stooping
-Parched the flowers they bear along
+stooping
+parched the flowers they bear along
 Visuals:
 Moods:
 
 3,2,2 - My nosegays are for Captives -
 Words:
-Nosegays
-Moor
-Errand
+nosegays
+moor
+errand
 Visuals:
 nosegays
 Moods:
 
 3,2,3 - Sexton! My Master's sleeping here.
 Words:
-Sexton
-Creeps
+sexton
+creeps
 Visuals:
 Moods:
 
 3,2,4 - The rainbow never tells me
 Words:
-Gust
-Eloquent
+gust
+eloquent
 Visuals:
 Moods:
 transcendental
 
 3,2,5 - One dignity delays for all -
 Words:
-One dignity delays for all
-Mitred
-Dignified
-Ermine
-Escutscheon
+one dignity delays for all
+mitred
+dignified
+ermine
+escutscheon
 Visuals:
 Moods:
 death
 
 3,2,6 - As by the dead we love to sit -
 Words:
-Grapple
-Fading ratio
-Penurious
+grapple
+fading ratio
+penurious
 Visuals:
 Moods:
 death
@@ -607,10 +607,10 @@ EH
 
 3,2,7 - New feet within my garden go -
 Words:
-Sod
-Elm
-Pensive
-Punctual
+sod
+elm
+pensive
+punctual
 Visuals:
 elm
 Moods:
@@ -626,15 +626,15 @@ With pinholes as if for sending with flower
 
 3,3,1 - I never told the buried gold
 Words:
-Plunder
-Crouch
-Pace
-Did but a snake bisect the brake
-Forfeit
-Booty
-Ingots
-Spade
-Shrewd
+plunder
+crouch
+pace
+did but a snake bisect the brake
+forfeit
+booty
+ingots
+spade
+shrewd
 Visuals:
 Moods:
 Sent:
@@ -642,18 +642,18 @@ SD
 
 3,3,2 - I never lost as much but twice
 Words:
-Sod
-Reimbursed my store
+sod
+reimbursed my store
 Visuals:
 Moods:
 
 3,3,3 - I haven't told my garden yet -
 Words:
-Break it to the Bee
-Should have the face to die
-Rambled
-Lisp
-Nor heedless by the way
+break it to the bee
+should have the face to die
+rambled
+lisp
+nor heedless by the way
 Visuals:
 Moods:
 death
@@ -661,8 +661,8 @@ secretive
 
 3,3,4 - I often passed the Village
 Words:
-Dial
-Daisies
+dial
+daisies
 flutter down
 enfold
 Visuals:
@@ -676,10 +676,10 @@ Dollie was family nickname of SD which ED adopted
 
 3,4,1 - The morns are meeker than they were -
 Words:
-Meeker
-Plumper
-Maple
-Lest I sh'd be old fashioned
+meeker
+plumper
+maple
+lest I sh'd be old fashioned
 Visuals:
 maple
 Moods:
@@ -689,11 +689,11 @@ SD (with a flower and ribbon)
 
 3,4,2 - Whether my bark went down at sea -
 Words:
-Bark
-Docile sails
-Mystic mooring
-Errand
-Out upon the Bay
+bark
+docile sails
+mystic mooring
+errand
+out upon the bay
 Visuals:
 Moods:
 philosophical
@@ -701,21 +701,21 @@ transcendental
 
 3,4,3 - Taken from men - this morning -
 Words:
-Banners
-Marshalled
-As the East from Even
-Border star
-Courtiers quaint
+banners
+marshalled
+as the east from even
+border star
+courtiers quaint
 Visuals:
 Moods:
 death
 
 3,4,4 - Sleep is supposed to be
 Words:
-Station grand
-Down wh', on either hand the hosts of witness stand
-Banner
-Red array
+station grand
+down wh', on either hand the hosts of witness stand
+banner
+red array
 Visuals:
 Moods:
 Sent:
@@ -723,17 +723,17 @@ SD
 
 3,4,5 - If I should die -
 Words:
-Gurgle
-Bustling
-Depart at option
-Enterprise
-Stocks
-Daisies
-Commerce
-Tranquil
-Serene
-Sprightly
-Conduct
+gurgle
+bustling
+depart at option
+enterprise
+stocks
+daisies
+commerce
+tranquil
+serene
+sprightly
+conduct
 Visuals:
 daisy
 Moods:
@@ -741,7 +741,7 @@ death
 
 3,4,6 - By Chivalries as tiny,
 Words:
-Chivalries
+chivalries
 Visuals:
 Moods:
 

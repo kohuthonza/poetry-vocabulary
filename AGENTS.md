@@ -4,7 +4,11 @@ For requests to update a poet's `src.txt` into Anki, follow `common/update_src.m
 
 For a small approved correction, edit the existing Anki note and src directly, read back once, and stop. Do not create fix histories, Git checkpoints, or processing-log entries for individual corrections. Correcting an imported record does not reopen its book/poem. Reconciliation files contain only active unresolved conflicts and must be completely empty when none remain. Move lasting guidance into common or poet-specific instructions, not a reconciliation history.
 
-For new source processing, plan source records and destination decks for user confirmation before typo review; resolve typo decisions before the visual proposal; obtain visual confirmation before collecting new images and writing the approved update. Preserve approvals already given for the current scope.
+For new source processing, confirm source records and destination decks, resolve typos, then confirm a visual proposal using local metadata only. Finish writing and verifying vocabulary in Anki and normalized src before any image search, source-page retrieval or download. Images and Visual attachments come last. Preserve approvals already given for the current scope.
+
+Normalize processed src Words by the same capitalization rules as Anki English Word, preserving required capitals, wording and historical forms. Normalize Visuals to lowercase and established same-meaning image-index labels; lowercase Moods. Preserve headings and other metadata; do not extend changes to unprocessed records without authorization.
+
+Keep context bounded: read active instructions once, parse large files/results locally, and expose only scoped records, required fields and exceptions. Never dump tool catalogues, all collection IDs, rendered card/template HTML, raw website HTML or whole image indexes. Use the compact-output and resumable-draft rules in common/update_src.md.
 
 Keep processing logs limited to a title, status sections, deck mappings and poem/book headings. Do not add instructions, narrative summaries, dates, counts, approval notes or fix histories. General guidance belongs in common instructions; retain only necessary poet-specific exceptions in that poet's instructions to prevent repeated false issues. Use Git diffs for changes inside records. Do not create a separate Words/Visuals tracking database. Deleting a logged heading requests a redo that reconciles existing Anki notes.
 

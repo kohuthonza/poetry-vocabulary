@@ -28,9 +28,13 @@ Replace `NOTE_ID` with a live note ID. The update input is a JSON object of only
 
 Scripts can import `AnkiConnect` from `tools.common.anki` and use `call`, `update_fields` or `media_dir`.
 
+For large responses, import the client in a script and project only the fields needed for the decision. Keep raw results in memory or a temporary file, not tool output. In particular, never print full `cardsInfo` question/answer HTML or `modelTemplates`. With MCP, consume `structuredContent` when available, otherwise parse the text payload once; do not print both representations. Search across decks using scoped identifier batches and HTML-decode fields for comparison.
+
+Save each generated vocabulary block and successful write result promptly in a task-scoped `/tmp` JSON draft so a later turn can resume. Turn-local tool memory is not durable. These temporary drafts are not repository tracking files or approval records; remove them after verified completion. Retrieve HTML/JSON/PDF evidence into temporary files and extract bounded metadata or relevant text before returning output. Do not print raw image tags or `srcset` attributes.
+
 ## Approved images
 
-After subject/source selection and approval:
+Only after approved vocabulary has been written to Anki and normalized src has been verified, select sources for the approved visual subjects. Then download:
 
 ```sh
 python3.14 -m tools.common.images download \
