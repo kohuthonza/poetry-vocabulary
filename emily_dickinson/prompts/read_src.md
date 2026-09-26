@@ -24,17 +24,22 @@ Here `<NN>` is the fascicle number padded to at least two digits and `<ROMAN>` i
 | `4,*,*` | `Emily Dickinson::04 Fascicle IV` |
 | `5,*,*` | `Emily Dickinson::05 Fascicle V` |
 
-Fascicles I and II were present in live Anki on 2026-09-25; III–V are proposed destinations derived from this rule, not evidence of past imports. A needed new deck must appear in the initial plan. Preserve source poem order, including sheet order, and do not start a later fascicle just because its text exists when the user selected a smaller scope.
+A needed new deck must appear in the initial plan. Preserve source poem order, including sheet order, and do not start a later fascicle just because its text exists when the user selected a smaller scope.
+
+## Retained exceptions
+
+- Ignore Cole in Visuals: it is a painter reference, not a vocabulary image request, and does not prevent completion.
+- Ghent remains vocabulary only; do not add it back to Visuals or create city images for it.
 
 ## Vocabulary and visuals
 
 Search the whole collection, including other fascicles and poets, for existing vocabulary. Reuse a suitable note wherever its cards reside; another deck is not a reconciliation problem. Check the current poem's meaning, add an important missing meaning to the existing note if needed while preserving earlier meanings, otherwise leave it unchanged. Never move existing cards or change their decks. Fascicle routing and log mappings apply only to new cards.
 
-Consult [reconciliation.md](../reconciliation.md) for the initial comparison findings, outstanding matches and subsequent decisions. Use [processing_log.md](../processing_log.md) for poem/deck mappings and completion status. Unmatched selections are candidates for investigation, not permission to create duplicate notes or replace images.
+Consult [reconciliation.md](../reconciliation.md) only for active unresolved conflicts; leave it completely empty when none remain. Use [processing_log.md](../processing_log.md) for poem/deck mappings and completion status. Unmatched selections are candidates for investigation, not permission to create duplicate notes or replace images.
 
 Use the common rules for approved typo corrections, capitalization, five-example standard entries, empty-example excerpts, mandatory extraction, independent explanations and aligned Czech translations. Retain poem context for extracted entries and duplicate merges. Do not silently substitute another edition's wording or modernize historical forms.
 
-Only manually selected Visuals concepts qualify. Visuals normally use the singular form of a word contained in the poem's vocabulary. Assign each to the closest matching entry: prefer the same standalone word (including a relevant extracted entry), then the closest phrase containing it, allowing capitalization and singular/plural differences. For example, Robin matches crimson robin. Report actual missing terms or ambiguous matches; do not create vocabulary solely from Visuals. Ignore Cole in Visuals: it is a painter reference, not a vocabulary image request, and does not prevent completion.
+Only manually selected Visuals concepts qualify. Visuals normally use the singular form of a word contained in the poem's vocabulary. Assign each to the closest matching entry: prefer the same standalone word (including a relevant extracted entry), then the closest phrase containing it, allowing capitalization and singular/plural differences. For example, Robin matches crimson robin. Report actual missing terms or ambiguous matches; do not create vocabulary solely from Visuals.
 
 Normalize Visuals labels to lowercase and use the established image-index subject label when a same-meaning alias is present, for example laurels → laurel. Keep existing basenames and media filenames unchanged. Normalize Moods labels to lowercase as well, including comma-separated mood labels. Preserve headings, metadata such as Sent, and required capitals in Words, such as Pleiad and Ghent. Metadata normalization alone does not request Anki processing of later fascicles.
 

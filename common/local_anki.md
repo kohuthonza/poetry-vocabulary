@@ -4,14 +4,14 @@ Use this guide with [update_src.md](update_src.md). Anki Desktop must be running
 
 ## Interfaces and startup
 
-Prefer **Codex → Anki MCP → AnkiConnect → Anki Desktop** for exposed operations. The user explicitly authorizes **direct AnkiConnect for operations unavailable through MCP**. MCP is a convenience, not a restriction; do not ask again for this general permission. Environment network/filesystem approvals still apply. Do not manipulate the live collection database directly or silently switch to desktop automation.
+Use **Codex → Anki MCP → AnkiConnect → Anki Desktop** with full read/write access. Prefer MCP; the user explicitly authorizes **direct AnkiConnect whenever an operation is unavailable through MCP or direct access is more convenient**. MCP is a convenience, not a restriction; do not ask again for this general permission or impose a read-only mode. Environment network/filesystem approvals still apply. Do not manipulate the live collection database directly or silently switch to desktop automation.
 
 The persistent installation is `@ankimcp/anki-mcp-server@0.25.1`, under `/home/ikohut/.local/lib/node_modules`, with executable `/home/ikohut/.local/bin/ankimcp`. It does not depend on an npx cache. Existing configuration:
 
 ```toml
 [mcp_servers.anki]
 command = "/home/ikohut/.local/bin/ankimcp"
-args = ["--stdio", "--read-only"]
+args = ["--stdio"]
 
 [mcp_servers.anki.env]
 ANKI_CONNECT_URL = "http://localhost:8765"
@@ -19,7 +19,7 @@ ANKI_CONNECT_URL = "http://localhost:8765"
 
 Start Anki, then the CLI, which normally launches MCP over stdio. Check registration with `codex mcp list`. An active session may not expose newly registered tools; a local stdio MCP client can launch the stable executable without reinstalling it. Discover only needed tools and argument schemas.
 
-The current `--read-only` registration blocks content writes but permits some study/sync operations. Use it for inspection. For an approved update, use an available write-capable MCP connection or direct AnkiConnect under the existing fallback authorization. Do not silently alter permanent CLI configuration. Content authorization does not imply sync, review or scheduling changes.
+MCP is configured for both reads and writes. After changing startup arguments, restart the MCP connection or start a new CLI session to load them. An already-running server retains its previous arguments; if necessary, launch the installed executable over stdio with the configuration above. Interface access does not change the content decisions and approvals in the vocabulary workflow.
 
 The original install command was `npm install --global --prefix /home/ikohut/.local @ankimcp/anki-mcp-server@0.25.1`. Keep it pinned unless an upgrade is requested. A persistent third-party install is not a security audit.
 

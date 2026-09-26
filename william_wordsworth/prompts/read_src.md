@@ -12,15 +12,22 @@ For `Prelude 1805 - Book <ROMAN>`, convert the Roman book number to its two-digi
 
 `William Wordsworth::Prelude 1805 - <NN> Book <ROMAN>`
 
-For example, Book I goes to `William Wordsworth::Prelude 1805 - 01 Book I`, Book IX to `William Wordsworth::Prelude 1805 - 09 Book IX`, and Book XIII to `William Wordsworth::Prelude 1805 - 13 Book XIII`. The live names were confirmed through MCP on 2026-09-25. The separate `Wordsworth` deck is not this parent. Do not create a new `Prelude` parent from historical names. For a different work or an unrecognized heading, propose a new routing rule rather than guessing.
+For example, Book I goes to `William Wordsworth::Prelude 1805 - 01 Book I`, Book IX to `William Wordsworth::Prelude 1805 - 09 Book IX`, and Book XIII to `William Wordsworth::Prelude 1805 - 13 Book XIII`. The separate `Wordsworth` deck is not this parent. Do not create a new `Prelude` parent from historical names. For a different work or an unrecognized heading, propose a new routing rule rather than guessing.
 
 Keep book order and Words order. Extra standalone vocabulary extracted into Anki is expected and must not automatically be inserted into src. Search the entire collection for repeated terms, including other books, the separate Wordsworth deck and other poets. Reuse suitable notes wherever they reside; another deck is not a reconciliation problem. Check the current passage's meaning, add an important missing meaning to the existing note if needed, otherwise leave it unchanged. Never move existing cards or change their decks. The log's destination applies to new cards only, not every shared note used by the book.
 
-## Vocabulary and existing decisions
+## Vocabulary
 
 Use the common classification, extraction, example, semantic-alignment and capitalization rules. The historical rule based on whether a CSV already had an original example is inapplicable to new src entries.
 
-Consult [reconciliation.md](../reconciliation.md) for prior source-to-Anki decisions and outstanding issues. Look up current note IDs in live Anki when needed. Keep `oars` in Book I Words; `oats` remains a separate cereal visual and existing note. Retain previously approved splits/expansions and `faltering at length`. Suspected errors and edition differences were explicitly retained for now. The current review in reconciliation.md is limited to highly probable typing errors; valid historical forms and wording differences are excluded. Do not treat the old generated Anki explanations as proof of a typo. A correction requires the user's decision, not silent normalization. Do not import historical counts or “next book” statements from old prompts as current progress.
+Consult [reconciliation.md](../reconciliation.md) only for active unresolved conflicts; an empty file means there are none recorded. Use the processing log for completion and live Anki for current note IDs. Do not import historical counts or “next book” statements from old prompts as current progress.
+
+Do not treat old generated Anki explanations as proof of a typo. A spelling correction requires the user's decision, not silent normalization. Preserve repeated Words selections and their order. Leave Moods empty when the user supplies none.
+
+## Retained exceptions
+
+- Book I uses `oars` in Words, while `oats` remains an intentional separate cereal visual and existing note.
+- Retain `langour`, `dythyrambic fervour`, `toil abstruse`, `returning from the great spousal newly solemnized`, and `voices of the hawkers in the crowd bawling`. Historical forms and valid wording differences from the online PDF are not grounds for automatic correction. Book IX retains `thrice` despite the PDF's `Trice`.
 
 ## Visuals
 
@@ -29,5 +36,3 @@ Use prefix `ww-` and the local [image_sources.md](../image_sources.md). If a sel
 If the user explicitly asks for additional candidate suggestions, the historical preferences are animals/plants and unfamiliar concrete buildings/places; exclude abstract/figurative subjects, landscape terms, ordinary objects and familiar geographic names. Existing exceptions include tether, domestic peat-fire, and knave in the playing-card sense. These preferences do not revoke already selected/indexed visuals.
 
 Prefer relevant Cumbrian/British specimens for those passages, and the appropriate locality for passages elsewhere; correct identification comes first. `grunsel` includes a clearly yellow-flowered common groundsel image; do not create a separate yellow-grunsel set. `knave` illustrates the jack, `peat-fire` domestic peat fuel, and `tether` the visible restraint. Keep indexed homonym choices explicit: Book X pine images illustrate the tree, although the passage uses the verb. Do not automatically attach a wrong-sense set to a new note. Existing oats imagery must never be attached to oars.
-
-Known unresolved imported links: primrose and brood have indexed sets but had empty Visual fields at reconciliation; `faltering at length` lacked an exact note. Plan their reconciliation when those records are selected. Do not redownload their existing sets or silently declare these exceptions fixed.

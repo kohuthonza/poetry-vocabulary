@@ -1,7 +1,5 @@
 # William Wordsworth processing log
 
-Prelude 1805 — Books I–XIII processed. Individual corrections do not reopen the book imports.
-
 ## Processed
 
 William Wordsworth::Prelude 1805 - 01 Book I ->

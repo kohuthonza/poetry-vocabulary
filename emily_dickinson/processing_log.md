@@ -1,9 +1,5 @@
 # Emily Dickinson processing log
 
-Fascicles I–II processed and reconciled, including the selected vocabulary and approved visuals. Ghent is vocabulary only; Cole painter annotations are ignored. Individual corrections do not reopen completed poem imports.
-
-Track poem headings here; use ordinary Git diffs and live Anki for changes within poems. Delete a heading to request its redo.
-
 ## Processed
 
 Emily Dickinson::01 Fascicle I ->
@@ -62,8 +58,6 @@ Emily Dickinson::02 Fascicle II ->
 2,4,6 - Baffled for just day or two
 
 ## Proposed
-
-Fascicles III–V are a draft destination plan only; processing and visuals have not been approved.
 
 Emily Dickinson::03 Fascicle III ->
 3,1,1 - Delayed till she had ceased to know -
