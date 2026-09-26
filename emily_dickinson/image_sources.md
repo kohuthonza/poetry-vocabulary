@@ -1,10 +1,10 @@
 # Emily Dickinson visual vocabulary
 
-135 JPEG images across 27 visual sets, saved directly in local Anki media. Anki stores the stable basename in its Visual field. Source keywords define new basenames; their matching vocabulary entries determine the note attachments.
+145 JPEG images across 29 visual sets, saved directly in local Anki media. Anki stores the stable basename in its Visual field. Source keywords define new basenames; their matching vocabulary entries determine the note attachments.
 
 ## Files and future additions
 
-All 27 sets are resolved, with five files per set numbered 0–4. Keep the `ed-` prefix and existing basenames stable. Reuse a set for the same whole term and meaning, including the listed aliases. Later images use the next unused number, such as `ed-gentian-5.jpg`; the Anki Visual basename stays unchanged and the Anki renderer must support the available count.
+All 29 sets are resolved, with five files per set numbered 0–4. Keep the `ed-` prefix and existing basenames stable. Reuse a set for the same whole term and meaning, including the listed aliases. Later images use the next unused number, such as `ed-gentian-5.jpg`; the Anki Visual basename stays unchanged and the Anki renderer must support the available count.
 
 All files are actual JPEGs, converted at quality 95 without cropping, resizing or upscaling. Dimensions describe the downloaded website rendition, not an unavailable master original. Transparency was composited onto white where needed. All images were decoded and visually reviewed during collection; credits and watermarks were retained. Only compact temporary previews were resized. The Fascicle 1 prefix update changed filenames without altering image content.
 
@@ -44,6 +44,9 @@ Identification notes: capuchin uses the historical garment sense, with distinct 
 | robin | ed-robin | American robin (Turdus migratorius) | crimson robin |
 | pleiad | ed-pleiad | Pleiades stars: ground-based optical, Cassini visible-light, Spitzer and WISE infrared views | Pleiad |
 | violet | ed-violet | Common blue violet (Viola sororia), including a white-flowered form | violets |
+
+| nosegays | ed-nosegays | Small hand-tied flower bouquets, including a traditional tussie-mussie | nosegay |
+| elm | ed-elm | American elm (Ulmus americana), tree habit, leaves, fruits and bark | elms |
 
 ## Source index
 
@@ -188,3 +191,13 @@ Access note: Birdfact and one Les-oiseaux.com image URL returned HTTP 403 and we
 | ed-pleiad-2.jpg | 687 × 559 | JPEG | [source](https://images.nasa.gov/details/PIA08260) | [image](https://images-assets.nasa.gov/image/PIA08260/PIA08260~orig.jpg) | NASA/JPL/Space Science Institute; The Seven Sisters; see NASA image-use terms |
 | ed-pleiad-3.jpg | 2855 × 2855 | JPEG | [source](https://images.nasa.gov/details/PIA09263) | [image](https://images-assets.nasa.gov/image/PIA09263/PIA09263~orig.jpg) | NASA/JPL-Caltech; The Seven Sisters Pose for Spitzer; see NASA image-use terms |
 | ed-pleiad-4.jpg | 4007 × 3061 | JPEG | [source](https://images.nasa.gov/details/PIA13121) | [image](https://images-assets.nasa.gov/image/PIA13121/PIA13121~orig.jpg) | NASA/JPL-Caltech/UCLA; Seven Sisters Get WISE; see NASA image-use terms |
+| ed-elm-0.jpg | 873 × 1000 | JPEG | [source](<https://gobotany.nativeplanttrust.org/species/ulmus/americana/>) | [image](<https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Ulmaceae/ulmus-americana-ha-ahaines.jpg>) | By Arthur Haines. / Copyright © 2026 Arthur Haines.; reuse licence not established |
+| ed-elm-1.jpg | 750 × 1000 | JPEG | [source](<https://gobotany.nativeplanttrust.org/species/ulmus/americana/>) | [image](<https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Ulmaceae/ulmus-americana-le-gmittelhauser.jpg>) | By Glen Mittelhauser. / Copyright © 2026 Glen Mittelhauser.; reuse licence not established |
+| ed-elm-2.jpg | 1000 × 750 | JPEG | [source](<https://gobotany.nativeplanttrust.org/species/ulmus/americana/>) | [image](<https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Ulmaceae/ulmus-americana-fr-ahaines.jpg>) | By Arthur Haines. / Copyright © 2026 Arthur Haines.; reuse licence not established |
+| ed-elm-3.jpg | 750 × 1000 | JPEG | [source](<https://gobotany.nativeplanttrust.org/species/ulmus/americana/>) | [image](<https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Ulmaceae/ulmus-americana-ba-gmittelhauser.jpg>) | By Glen Mittelhauser. / Copyright © 2026 Glen Mittelhauser.; reuse licence not established |
+| ed-elm-4.jpg | 661 × 1000 | JPEG | [source](<https://gobotany.nativeplanttrust.org/species/ulmus/americana/>) | [image](<https://newfs.s3.amazonaws.com/taxon-images-1000s1000/Ulmaceae/ulmus-americana-ha-clevine.jpg>) | By Carol Levine. / Copyright © 2026 Carol Levine.; reuse licence not established |
+| ed-nosegays-0.jpg | 572 × 508 | PNG | [source](<https://sarahpdukegardens.blogspot.com/2014/11/>) | [image](<https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2clf-INgwzehqy4oVjwzi5evokyNTR0A54GWnfa2tyRuV6GC8zRQP0_5Q40DEJcRTJz1UWpi8LLVMykSIEsyWGj2h_rYZMvZai3R91GrjVhsCWacrwph0SLYX8MT882t6MHGA4zEii8cf/s1600/Duke-Gardens-Tussie-Mussie2.png>) | Sarah P. Duke Gardens; photographer and reuse licence not established |
+| ed-nosegays-1.jpg | 2000 × 1484 | JPEG | [source](<https://www.laneflorist.com/products/nosegay>) | [image](<https://www.laneflorist.com/cdn/shop/products/Purple_and_pink.jpg?v=1444327531&width=2000>) | Lane Florist; photographer and reuse licence not established |
+| ed-nosegays-2.jpg | 2000 × 1653 | JPEG | [source](<https://www.laneflorist.com/products/nosegay>) | [image](<https://www.laneflorist.com/cdn/shop/products/Orange_and_Green.jpg?v=1428346659&width=2000>) | Lane Florist; photographer and reuse licence not established |
+| ed-nosegays-3.jpg | 2000 × 1694 | JPEG | [source](<https://www.laneflorist.com/products/nosegay>) | [image](<https://www.laneflorist.com/cdn/shop/products/Blue.jpg?v=1428346683&width=2000>) | Lane Florist; photographer and reuse licence not established |
+| ed-nosegays-4.jpg | 2000 × 1939 | JPEG | [source](<https://www.laneflorist.com/products/nosegay>) | [image](<https://www.laneflorist.com/cdn/shop/products/Allwhite.jpg?v=1634135195&width=2000>) | Lane Florist; photographer and reuse licence not established |

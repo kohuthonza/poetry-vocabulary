@@ -597,7 +597,7 @@ death
 3,2,6 - As by the dead we love to sit -
 Words:
 Grapple
-Fading ration
+Fading ratio
 Penurious
 Visuals:
 Moods:
@@ -629,7 +629,7 @@ Words:
 Plunder
 Crouch
 Pace
-Did but a snake bisect the break
+Did but a snake bisect the brake
 Forfeit
 Booty
 Ingots
@@ -663,10 +663,10 @@ secretive
 Words:
 Dial
 Daisies
-Visuals:
-daisy
 flutter down
 enfold
+Visuals:
+daisy
 Moods:
 death
 Sent:
@@ -677,7 +677,7 @@ Dollie was family nickname of SD which ED adopted
 3,4,1 - The morns are meeker than they were -
 Words:
 Meeker
-Plumer
+Plumper
 Maple
 Lest I sh'd be old fashioned
 Visuals:
