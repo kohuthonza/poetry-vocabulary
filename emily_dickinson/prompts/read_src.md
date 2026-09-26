@@ -24,7 +24,11 @@ Here `<NN>` is the fascicle number padded to at least two digits and `<ROMAN>` i
 | `4,*,*` | `Emily Dickinson::04 Fascicle IV` |
 | `5,*,*` | `Emily Dickinson::05 Fascicle V` |
 
-A needed new deck must appear in the initial plan. Preserve source poem order, including sheet order, and do not start a later fascicle just because its text exists when the user selected a smaller scope.
+Before any fascicle work, show `Emily Dickinson::<NN> Fascicle <ROMAN>` as a heading with a one-column `Poem` table listing **every** selected `N,N,N - first line` heading in source order. Do this even for a single, already-known deck. Wait for explicit approval of that table and destination before the source-text download or typo audit. Preserve source poem order, including sheet order, and do not start a later fascicle just because its text exists when the user selected a smaller scope.
+
+Before forming that table, run the read-only `poem_sources status` check for the whole fascicle. Review source-only and log-only headings, especially identical first lines under changed numbers after an insertion. A source-only heading can also be a deliberate log-deleted redo request; determine its scope from the user's request and live Anki, never from numbering alone. Then use `poem_sources plan` for the exact source-order proposal.
+
+After approval, download a usable full text for **each** selected poem to a task-scoped local archive before claiming any typo audit is complete. Check every Words line against the downloaded poem in context, including plausible English words that may conceal a misreading of an unfamiliar word. Present all suspected corrections at once in the common workflow's three-column table. Keep the local poems available while writing vocabulary so definitions and examples reflect the actual poem, then remove the temporary archive after verified completion. Use [resources.md](resources.md) for edition/source checks; do not assert “no typos” from src alone or from partial search snippets. The ED source-list and coverage helper is described in [tools/README.md](../../tools/README.md).
 
 ## Retained exceptions
 

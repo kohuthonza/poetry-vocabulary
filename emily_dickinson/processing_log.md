@@ -83,8 +83,6 @@ Emily Dickinson::03 Fascicle III ->
 3,4,5 - If I should die -
 3,4,6 - By Chivalries as tiny,
 
-## Proposed
-
 Emily Dickinson::04 Fascicle IV ->
 4,1,1 - Perhaps you'd like to buy a flower,
 4,1,2 - Water, is taught by thirst.
@@ -103,11 +101,12 @@ Emily Dickinson::04 Fascicle IV ->
 4,4,3 - This heart that broke so long -
 4,4,4 - On such a night, or such a night,
 
+
 Emily Dickinson::05 Fascicle V ->
 5,1,1 - So from the mould
 5,1,2 - Artists wrestled here!
 5,1,3 - Success is counted sweetest
-5,1,4 - The bed is not afraid of me.
+5,1,4 - The Bee is not afraid of me.
 5,1,5 - Where bells no more affright the morn -
 5,1,6 - Ambition cannot find him -
 5,1,7 - Our share of night to bear -
@@ -126,5 +125,6 @@ Emily Dickinson::05 Fascicle V ->
 5,4,1 - A something in a summer's Day
 5,4,2 - A throe upon the features -
 5,4,3 - Glowing is her Bonnet -
-5,4,4 - In lands I never saw - they say
-5,4,5 - For each extatic instant
+5,4,4 - Many cross the Rhine
+5,4,5 - In lands I never saw - they say
+5,4,6 - For each extatic instant

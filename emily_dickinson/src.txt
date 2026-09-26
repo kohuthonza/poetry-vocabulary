@@ -747,10 +747,10 @@ Moods:
 
 4,1,1 - Perhaps you'd like to buy a flower,
 Words:
-Daffodil
-Bonnet
-Clover
-Why, I will lend until just then, but not an hour more
+daffodil
+bonnet
+clover
+why, I will lend until just then, but not an hour more
 Visuals:
 daffodil
 clover
@@ -760,31 +760,31 @@ jolly
 
 4,1,2 - Water, is taught by thirst.
 Words:
-Transport
-Throe
-Memorial mold
+transport
+throe
+memorial mold
 Visuals:
 Moods:
 philosophical
 
 4,1,3 - Have you got a Brook in your little heart,
 Words:
-Bashful
-Blushing birds
-Brook
+bashful
+blushing birds
+brook
 Visuals:
 Moods:
 philosophical
 
 4,1,4 - Flowers - Well - if anybody
 Words:
-Extasy
-Transport
-Contra flow
-Daisies
-A simple breast like mine
-Pathos
-Aesthetics
+extasy
+transport
+contra flow
+daisies
+a simple breast like mine
+pathos
+aesthetics
 Visuals:
 daisy
 Moods:
@@ -792,14 +792,14 @@ philosophical
 
 4,1,5 - Pigmy seraphs - gone astray -
 Words:
-Velvet people from Vevay
-Belles
-Bees exclusive Coterie
-Fold belted down with emerald
-A tint so lustrous meek
-Never such an ambuscade as of briar and leaf displayed for my little damask maid
-Earl's distinguished face
-Subdue
+velvet people from Vevay
+belles
+bees exclusive coterie
+fold belted down with emerald
+a tint so lustrous meek
+never such an ambuscade as of briar and leaf displayed for my little damask maid
+earl's distinguished face
+subdue
 Visuals:
 emerald
 damask
@@ -810,17 +810,17 @@ SD
 
 4,2,1 - Heart not so heavy as mine
 Words:
-Wending
-A careless snatch
-A ditty of the street
-Anodyne
-Bobolink
-Sauntering
-Carolled and mused
-Bubbled
-Chirping brook
-Set bleeding feet to minuets
-Bugle
+wending
+a careless snatch
+a ditty of the street
+anodyne
+bobolink
+sauntering
+carolled and mused
+bubbled
+chirping brook
+set bleeding feet to minuets
+bugle
 Visuals:
 bobolink
 Moods:
@@ -830,23 +830,23 @@ Mary Bowles
 
 4,2,2 - Soul, Wilt thou toss again?
 Words:
-Toss
-Ballot
-Lingers
-Imps in eager caucus
-Raffle for my soul
+toss
+ballot
+lingers
+imps in eager caucus
+raffle for my soul
 Visuals:
 Moods:
 
 4,2,3 - An altered look about the hills -
 Words:
-Vermillion foot
-A flippant fly upon the pane
-An added strut in Chanticleer
-Shrill
-Fern odors
-Furtive look
-Annual reply
+vermillion foot
+a flippant fly upon the pane
+an added strut in Chanticleer
+shrill
+fern odors
+furtive look
+annual reply
 Visuals:
 fern
 Moods:
@@ -854,11 +854,11 @@ transcendental
 
 4,2,4 - Some, too fragile for winter winds
 Words:
-Tenderly tucking them in from frost before their feet are cold
-Sportsman
-Covert
-Sparrows
-Fold
+tenderly tucking them in from frost before their feet are cold
+sportsman
+covert
+sparrows
+fold
 Visuals:
 sparrow
 Moods:
@@ -866,22 +866,22 @@ death
 
 4,3,1 - Whose are the little beds - I asked
 Words:
-'Tis Daisy, in the shortest
+'tis daisy, in the shortest
 Leontodon
-Iris
-Aster
-Anemone
-Bell
+iris
+aster
+anemone
+bell
 Bartsia
-Blanket red
-Chubby
-Daffodil
-Her busy food she plied
-Humming the quaintest lullaby
+blanket red
+chubby
+daffodil
+her busy foot she plied
+humming the quaintest lullaby
 Epigea
-The crocus stir her lids
-Rhodora's cheek
-Reverent
+the crocus stirs her lids
+rhodora's cheek
+reverent
 Visuals:
 daisy
 leontodon
@@ -900,12 +900,12 @@ jolly
 
 4,3,2 - For every bird a nest -
 Words:
-Wherefore in timid quest some little wren goes seeking round
-Boughs
-Pilgrim
-Twine
-Lark
-Throng
+wherefore in timid quest some little wren goes seeking round
+boughs
+pilgrim
+twine
+lark
+throng
 Visuals:
 lark
 Moods:
@@ -920,11 +920,11 @@ Mary Bowles
 
 4,4,1 - She bore it till the simple veins
 Words:
-Pleading
-Crayons
-Daffodils
-Timid bonnet
-Courtiers
+pleading
+crayons
+daffodils
+timid bonnet
+courtiers
 Visuals:
 daffodil
 Moods:
@@ -932,13 +932,13 @@ death
 
 4,4,2 - We should not mind so small a flower
 Words:
-We should not mind so small a flower except it quite bring our little garden that we lost back to the lawn again
-Carnations nod
-Reel
-Flutes
-Whoso
-Bobolinks
-Dandelions
+we should not mind so small a flower except it quiet bring our little garden that we lost back to the lawn again
+carnations nod
+reel
+flutes
+whoso
+bobolinks
+dandelions
 Visuals:
 carnation
 bobolink
@@ -949,30 +949,30 @@ SD
 
 4,4,3 - This heart that broke so long -
 Words:
-Flagged
-Fluttered panting
+flagged
+fluttered panting
 Visuals:
 Moods:
 
 4,4,4 - On such a night, or such a night,
 Words:
-Slipped
+slipped
 Chanticleer
-Giddy
-Plump
-Knoll
-Spools of thread
-Trudging feet
-Playmates, and holidays, and nuts
-Feet so precious charged
+giddy
+plump
+knoll
+spools of thread
+trudging feet
+playmates, and holidays, and nuts
+feet so precious charged
 Visuals:
 Moods:
 
 5,1,1 - So from the mould
 Words:
-Mould
-Bulb
-Sagacious eyes
+mould
+bulb
+sagacious eyes
 Highland gay
 Visuals:
 Moods:
@@ -981,17 +981,17 @@ SD
 
 5,1,2 - Artists wrestled here!
 Words:
-Tint cashmere
-Easel
+tint cashmere
+easel
 Visuals:
 easel
 Moods:
 
 5,1,3 - Success is counted sweetest
 Words:
-Sorest need
-Purple host
-Burst
+sorest need
+purple host
+burst
 Visuals:
 Moods:
 philosophical
@@ -999,27 +999,27 @@ Sent:
 SD
 THW
 
-5,1,4 - The bed is not afraid of me.
+5,1,4 - The Bee is not afraid of me.
 Words:
-Cordially
-Wherefore mine eye thy silver mists
+cordially
+wherefore mine eye thy silver mists
 Visuals:
 Moods:
 
 5,1,5 - Where bells no more affright the morn -
 Words:
-Affright
-Scrabble
-Nimble
-Placid
+affright
+scrabble
+nimble
+placid
 Visuals:
 Moods:
 devotional
 
 5,1,6 - Ambition cannot find him -
 Words:
-Leagues of nowhere
-Eminent
+leagues of nowhere
+eminent
 Visuals:
 Moods:
 Sent:
@@ -1027,23 +1027,23 @@ SD
 
 5,1,7 - Our share of night to bear -
 Words:
-Our blank in bliss to fill, our blank in scorning
+our blank in bliss to fill, our blank in scorning
 Visuals:
 Moods:
 
 5,2,1 - "Good night," because we must!
 Words:
-Intricate
-Saucy
+intricate
+saucy
 Visuals:
 Moods:
 devotional
 
 5,2,2 - South winds jostle them -
 Words:
-Jostle
-Hover
-Plucking
+jostle
+hover
+plucking
 Visuals:
 Moods:
 Sent:
@@ -1053,41 +1053,43 @@ THW
 
 5,2,3 - Low at my problem bending,
 Words:
-Serener
-Statlier sums
-My figures file away
-Baffled fingers
-Perplexity
+serener
+statelier sums
+my figures file away
+baffled fingers
+perplexity
 Visuals:
 Moods:
-philosophical, transcendental
+philosophical
+transcendental
 Sent:
 SD
 
 5,2,4 - What Inn is this
 Words:
-Ruddy fires on the hearth
-Brimming tankards flow
+ruddy fires on the hearth
+brimming tankards flow
 Visuals:
 Moods:
 death
 
 5,2,5 - I had some things that I called mine -
 Words:
-Amities
-Bailiff
-Pedigree
-Retain
+amities
+bailiff
+pedigree
+retain
 Visuals:
 Moods:
-devotional, jolly
+devotional
+jolly
 
 5,2,6 - In rags mysterious as these
 Words:
-Courtiers
-Vailing the purple, and the plumes
-Ermine
-Imposing door
+courtiers
+vailing the purple, and the plumes
+ermine
+imposing door
 Visuals:
 Moods:
 
@@ -1099,45 +1101,46 @@ jolly
 
 5,3,1 - "Arcturus" is his other name -
 Words:
-Savan
-Frail
-Stamens
-Aforetime
-Clover
-Is mapped, and charted
-Frisk about
-Whatever prank betides
-Stile
+savan
+frail
+stamens
+aforetime
+clover
+is mapped, and charted
+frisk about
+whatever prank betides
+stile
 Visuals:
 clover
 Moods:
-philosophical, jolly
+philosophical
+jolly
 
 5,3,2 - Talk with prudence to a Beggar
 Words:
-Prudence
-Reverently
-Viands
-Enfranchised
+prudence
+reverently
+viands
+enfranchised
 Visuals:
 Moods:
 
 5,3,3 - If this is "fading"
 Words:
-Shroud of red
-Peacock
-Presumes
+shroud of red
+peacock
+presumes
 Visuals:
 peacock
 Moods:
 
 5,3,4 - As Watchers hang upon the East -
 Words:
-Revel
-Savory fancy spread
-Beguiles
-Amethyst
-Flagons
+revel
+savory fancy spread
+beguiles
+amethyst
+flagons
 Visuals:
 amethyst
 Moods:
@@ -1146,10 +1149,10 @@ SD
 
 5,3,5 - Her breast is fit for pearls,
 Words:
-Crest
-Sparrow
-Sweet of twigs and twine
-Perennial nest
+crest
+sparrow
+sweet of twigs and twine
+perennial nest
 Visuals:
 sparrow
 Moods:
@@ -1161,20 +1164,20 @@ Moods:
 
 5,4,1 - A something in a summer's Day
 Words:
-Flambeaux
-Solemnizes
-Transporting
-Inspecting
-Lest such a subtle shimmering grace flutter too far from me
-Chafes
-Rears
-Amber
+flambeaux
+solemnizes
+transporting
+inspecting
+lest such a subtle shimmering grace flutter too far for me
+chafes
+rears
+amber
 Visuals:
 Moods:
 
 5,4,2 - A throe upon the features -
 Words:
-Denominated
+denominated
 Visuals:
 Moods:
 death
@@ -1183,10 +1186,10 @@ SD
 
 5,4,3 - Glowing is her Bonnet -
 Words:
-Bonnet
-Kirtle
-Daisy
-Rill
+bonnet
+kirtle
+daisy
+rill
 Visuals:
 bonnet
 kirtle
@@ -1202,9 +1205,9 @@ Moods:
 
 5,4,5 - In lands I never saw - they say
 Words:
-Bonnets
-Firmament
-Meek at whose everlasting feet a myriad Daisy play
+bonnets
+firmament
+meek at whose everlasting feet a myriad Daisy play
 Visuals:
 bonnet
 daisy
@@ -1213,11 +1216,11 @@ transcendental
 
 5,4,6 - For each extatic instant
 Words:
-Anguish
-Keen and quivering ratio
-Sharp pittances of years
-Bitter contested farthings
-Coffers heaped with tears
+anguish
+keen and quivering ratio
+sharp pittances of years
+bitter contested farthings
+coffers heaped with tears
 Visuals:
 Moods:
 
@@ -1360,7 +1363,6 @@ Moods:
 Words:
 Visuals:
 Moods:
-
 
 
 

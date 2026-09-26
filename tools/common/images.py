@@ -2,6 +2,7 @@
 
 import argparse
 import hashlib
+import json
 import os
 from pathlib import Path
 import re
@@ -116,6 +117,48 @@ def download_image(client, *, filename, url, source, credit, index):
     return destination
 
 
+def download_batch(client, *, manifest, index):
+    """Save a reviewed image manifest sequentially; resume complete file/index pairs."""
+    items = json.loads(Path(manifest).read_text())
+    if not isinstance(items, list) or not items:
+        raise ValueError("Image manifest must be a non-empty JSON array")
+    names = set()
+    for item in items:
+        if not isinstance(item, dict) or set(item) != {"filename", "url", "source", "credit"}:
+            raise ValueError("Each image needs filename, URL, source and credit")
+        filename = item["filename"]
+        if not isinstance(filename, str) or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*-[0-9]+\.jpg", filename):
+            raise ValueError(f"Invalid image filename: {filename}")
+        if filename in names:
+            raise ValueError(f"Duplicate image filename: {filename}")
+        names.add(filename)
+        for key in ("url", "source"):
+            if not isinstance(item[key], str):
+                raise ValueError(f"{filename}: {key} must be a URL")
+            web_url(item[key])
+        if not isinstance(item["credit"], str) or not item["credit"].strip():
+            raise ValueError(f"{filename}: credit is required")
+    directory = client.media_dir()
+    outcomes = []
+    for item in items:
+        filename = item["filename"]
+        text = Path(index).read_text()
+        row = next((line for line in text.splitlines()
+                    if line.startswith(f"| {filename} |")), None)
+        exists = (directory / filename).is_file()
+        if bool(row) != exists:
+            raise ValueError(f"{filename}: media/index mismatch; repair before resuming")
+        if row:
+            if (link("source", item["source"]) not in row or
+                    link("image", item["url"]) not in row or cell(item["credit"]) not in row):
+                raise ValueError(f"{filename}: saved provenance differs from manifest")
+            outcomes.append((filename, "reused"))
+            continue
+        download_image(client, index=index, **item)
+        outcomes.append((filename, "saved"))
+    return outcomes
+
+
 def contact_sheet(client, basename, output):
     if not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", basename):
         raise ValueError("Invalid basename")
@@ -147,13 +190,24 @@ def main():
     preview = commands.add_parser("preview", help="Validate five JPEGs and create one contact sheet")
     preview.add_argument("basename")
     preview.add_argument("--output", required=True, help="New preview path, normally under /tmp")
+    batch = commands.add_parser("batch", help="Save a reviewed JSON image manifest, resuming complete files")
+    batch.add_argument("--manifest", required=True)
+    batch.add_argument("--index", required=True)
     args = vars(parser.parse_args())
     command = args.pop("command")
     try:
         client = AnkiConnect()
-        result = download_image(client, **args) if command == "download" else contact_sheet(client, **args)
-        print(result)
-    except (OSError, ValueError, AnkiError) as error:
+        if command == "download":
+            print(download_image(client, **args))
+        elif command == "preview":
+            print(contact_sheet(client, **args))
+        else:
+            result = download_batch(client, **args)
+            for filename, state in result:
+                print(f"{filename}: {state}")
+            print(f"{sum(state == 'saved' for _, state in result)} saved, "
+                  f"{sum(state == 'reused' for _, state in result)} reused")
+    except (OSError, ValueError, json.JSONDecodeError, AnkiError) as error:
         parser.exit(1, f"{error}\n")
 
 
