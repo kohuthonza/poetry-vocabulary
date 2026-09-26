@@ -19,3 +19,5 @@ Previously visualized notes still participate in the current approved image work
 Use Anki MCP with full read/write access; do not impose a read-only restriction. Prefer MCP, with direct AnkiConnect authorized whenever an operation is unavailable through MCP or direct access is more convenient. No additional permission is needed just to choose the interface. Downloads belong in the active local Anki media directory, not the historical cloud destinations. Do not create ZIPs or batch logs; retain the cumulative image source/credit rows and inspect local media for existing files.
 
 Existing numbered prompts are historical references and must remain until the user removes them. No active JK prompts have been defined; do not infer them from another poet or create them unless requested.
+
+Use Python 3.14 and the reusable helpers documented in `tools/README.md` for routine AnkiConnect and image work. Shared scripts live in `tools/common/`; add `tools/<poet>/` only for reusable poet-specific code. Keep processing decisions in the existing instructions and do not retain one-off correction scripts or processing histories in tools.

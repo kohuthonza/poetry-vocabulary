@@ -25,6 +25,8 @@ The original install command was `npm install --global --prefix /home/ikohut/.lo
 
 ## Direct AnkiConnect
 
+Use the Python 3.14 helper in `tools/common/anki.py` for routine requests and verified field updates; commands and environment settings are in [tools/README.md](../tools/README.md). Prefer reusing it to writing another temporary API wrapper. It does not replace MCP or change the approved task scope.
+
 POST JSON to `http://localhost:8765`, e.g. `{"action":"deckNamesAndIds","version":6}`. Inspect both `result` and `error`. Use `apiReflect` to discover available actions, and installed add-on code/documentation for parameters; MCP tools need not share AnkiConnect names or argument shapes. Keep access on localhost. No key was required by the verified local connection on 2026-09-25. If authentication is subsequently required, use existing local configuration or request the missing credential without logging secrets or disabling authentication.
 
 The installed API lacked a deck-renaming action when checked. `changeDeck` moves cards; `saveDeckConfig` changes options, not deck names. Do not replace renaming with recreate/move/delete operations implicitly. An unavailable operation may require a focused extension, prepared separately and explained before installation/restart.
