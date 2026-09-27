@@ -46,6 +46,7 @@ Visuals:
 Moods:
 Imploring
 
+
 Lines Written on 29 May, the Anniversary of Charles's Restoration, on Hearing the Bells Ringing
 Infatuate Britons, will you still proclaim
 Words:
@@ -56,17 +57,6 @@ Sad knell
 Visuals:
 Moods:
 Imploring
-
-As from a darkening gloom a silver dove
-Words:
-Pinions
-Crowned with circlets
-Bedight
-Quire
-Wherefore
-Impair
-Visuals:
-Moods:
 
 Stay, ruby breasted warbler, stay,
 Words:
@@ -97,6 +87,17 @@ Zest
 Muse's lore
 Reliev'd its smart
 Halo
+Visuals:
+Moods:
+
+As from a darkening gloom a silver dove
+Words:
+Pinions
+Crowned with circlets
+Bedight
+Quire
+Wherefore
+Impair
 Visuals:
 Moods:
 
@@ -244,6 +245,57 @@ Diadem
 Nightingale
 Moods:
 
+O come, dearest Emma! the rose is full blown
+Words:
+lavishly strown
+resplendently
+glades
+quiantly
+chaunting
+smile acquiesence
+voice sweetly bland
+Visuals:
+Moods:
+erotic
+
+Woman! when I behold thee flippant, vain,
+Words:
+Flippant
+Like these of yore
+Soft dimpled hands
+Dazzled senses
+Lark
+Lures
+Or thrice my palate moisten
+Tunings of a voice divine
+Pinions
+Intreats
+Vilely
+When I hear a lay that once I saw her hand awake
+Arbour
+Visuals:
+Lark
+Moods:
+Erotic
+Women
+
+O Solitude! if I must with thee dwell,
+Words:
+Jumbled heap of murky buildings
+Steep
+Observatory
+Whence
+Swell
+May seem a span
+Vigils
+Pavillion'd
+Fox-glove
+Haunts
+Visuals:
+Fox-glove
+Moods:
+Friendship
+
 To George Felton Mathew
 Sweet are the pleasures that to verse belong,
 Words:
@@ -308,44 +360,6 @@ Moods:
 Hellas
 Friendship
 
-O Solitude! if I must with thee dwell,
-Words:
-Jumbled heap of murky buildings
-Steep
-Observatory
-Whence
-Swell
-May seem a span
-Vigils
-Pavillion'd
-Fox-glove
-Haunts
-Visuals:
-Fox-glove
-Moods:
-Friendship
-
-Woman! when I behold thee flippant, vain,
-Words:
-Flippant
-Like these of yore
-Soft dimpled hands
-Dazzled senses
-Lark
-Lures
-Or thrice my palate moisten
-Tunings of a voice divine
-Pinions
-Intreats
-Vilely
-When I hear a lay that once I saw her hand awake
-Arbour
-Visuals:
-Lark
-Moods:
-Erotic
-Women
-
 Had I a man's fair form, then might my sighs
 Words:
 No cuirass glistens on my bosom's swell
@@ -354,25 +368,6 @@ Steep'd
 For me 'tis meet
 Her pallid face discloses
 Incantation
-Visuals:
-Moods:
-
-Give me women wine and snuff
-Words:
-You may do so sans objection
-Visuals:
-Moods:
-
-I am as brisk
-Words:
-Brisk
-Ey and as nimble as a milliner's thimble
-Visuals:
-Moods:
-
-O grant that like to Peter I
-Words:
-Dell
 Visuals:
 Moods:
 
@@ -413,6 +408,19 @@ Erotic
 Hellas
 Spenser
 Women
+
+I am as brisk
+Words:
+Brisk
+Ey and as nimble as a milliner's thimble
+Visuals:
+Moods:
+
+Give me women wine and snuff
+Words:
+You may do so sans objection
+Visuals:
+Moods:
 
 Specimen of an Induction to a Poem
 Words:
@@ -594,6 +602,32 @@ Visuals:
 Moods:
 Nature
 
+To a Friend Who Sent Me Some Roses
+As late I rambled in the happy fields,
+Words:
+rambled
+sky-lark
+tremulous dew
+lush clover covert
+dinted shields
+musk-rose
+wand
+tender plea
+unquell'd
+Visuals:
+sky-lark
+clover
+musk-rose
+
+Happy is England! I could be content
+Words:
+verdure
+languishment
+world of worldling
+clinging
+Visuals:
+Moods:
+
 To My Brother George
 Many the wonders I this day have seen;
 Words:
@@ -732,6 +766,19 @@ Moods:
 Friendship
 Reverence
 
+How many bards gild the lapses of time
+Words:
+gild the lapses of time
+brood
+throngs
+intrude
+occasion
+chime
+heaves
+that distance of recognizance bereaves
+Visuals:
+Moods:
+
 On First Looking into Chapman's Homer
 Much have I travell'd in the realms of gold,
 Words:
@@ -758,6 +805,79 @@ Eloquent distress
 Visuals:
 Moods:
 Reverence
+
+On Leaving Some Friends at an Early Hour
+Give me a golden pen, and let me lean
+Words:
+heap'd up flowers
+atween
+glide by
+pearly car
+half discovered wings, and glances keen
+what a height my spirit is contending
+Visuals:
+Moods:
+
+To My Brothers
+Small, busy flames play through the fresh laid coals,
+Words:
+Fraternal souls
+Poles
+Lore so voluble and deep
+Aye
+Condoles
+Visuals:
+Moods:
+Brother
+
+Addressed to Haydon
+Highmindedness, a jealousy for good,
+Words:
+noisome alley
+hooded shame
+mong'ring
+pitiable brood
+stedfast
+toiling gallantly
+stout unbending champion awes envy, and malice to their native sty
+still applause
+country's eye
+Visuals:
+Moods:
+reverence
+
+Addressed to the Same
+Great spirits now on earth are sojourning;
+Words:
+Sojourning
+Violet
+Steadfastness
+Meaner sound
+Dumb
+Visuals:
+Violet
+Moods:
+Reverence
+
+To G. A. W.
+Nymph of the downward smile, and sidelong glance,
+Words:
+Downward smile
+Sidelong glance
+Thou spar'st the flowers in thy mazy dance
+Which Grace more neatly trips it before Apollo
+Visuals:
+Moods:
+Women
+
+To Kosciusko
+Good Kosciusko, thy great name alone
+Words:
+Glorious pealing of the wide spheres
+Burst from clouds concealing
+Great of yore
+Visuals:
+Moods:
 
 Sleep and Poetry
 What is more gentle than a wind in summer?
@@ -907,51 +1027,6 @@ Liny marble
 Moods:
 Vindication
 
-To My Brothers
-Small, busy flames play through the fresh laid coals,
-Words:
-Fraternal souls
-Poles
-Lore so voluble and deep
-Aye
-Condoles
-Visuals:
-Moods:
-Brother
-
-Addressed to [Haydon]
-Great spirits now on earth are sojourning;
-Words:
-Sojourning
-Violet
-Steadfastness
-Meaner sound
-Dumb
-Visuals:
-Violet
-Moods:
-Reverence
-
-To G. A. W.
-Nymph of the downward smile, and sidelong glance,
-Words:
-Downward smile
-Sidelong glance
-Thou spar'st the flowers in thy mazy dance
-Which Grace more neatly trips it before Apollo
-Visuals:
-Moods:
-Women
-
-To Kosciusko
-Good Kosciusko, thy great name alone
-Words:
-Glorious pealing of the wide spheres
-Burst from clouds concealing
-Great of yore
-Visuals:
-Moods:
-
 I stood tip-toe upon a little hill
 Words:
 Nestling green
@@ -999,7 +1074,39 @@ Fanning away the dandelion's down
 Nimble toes
 Patting against the sorrel as she goes
 Locks auburne
-
+tuft of evening primroses
+dozes
+but that 'tis ever startled
+flitting of diverse moths
+gentle livers
+spangler of clouds
+Tumbling streams
+upcast eye
+smile us on
+calm grandeur of a sober line
+pine
+tale is beautifully staid
+hawthorn glade
+smotherings
+laurels
+jasmine
+Attire
+fondling nips
+tremulous
+ravishment
+rustle
+reedy stream
+pining
+tendril wreaths
+myrtle
+upswelling
+incense
+in fine wrath some golden sounds he won
+keels
+bashful
+half closed lattices
+nigh foolish with delight
+soft numbers, in that moment spoken
 Visuals:
 Laburnum
 Violet
@@ -1012,6 +1119,368 @@ Sallow
 Minnow
 Goldfinch
 Dandelion
+primroses
+moth
+pine
+hawthorn
+laurel
+jasmine
+myrtle
+Moods:
+Carnal
+Hellas
+
+Written in Disgust of Vulgar Superstition
+The Church bells toll a melancholy round,
+Words:
+toll
+damp
+many glories of immortal stamp
+Visuals:
+Moods:
+
+On the Grasshopper and Cricket
+The poetry of earth is never dead:
+Words:
+new-mown mead
+grasshopper's
+stove
+cricket's song
+drowsiness
+Visuals:
+grasshopper
+cricket
+Moods:
+
+After dark vapours have oppress'd our plains
+Words:
+unseemly stains
+sheaves
+rivulet
+Visuals:
+Moods:
+Autumn
+
+To a Young Lady Who Sent Me a Laurel Crown
+Fresh morning gusts have blown away all fear
+Words:
+gusts
+from gloominess I mount for ever
+bier
+temples
+abject
+stoutest band of mailed heroes
+Visuals:
+laurel
+Moods:
+
+On Receiving a Laurel Crown from Leigh Hunt
+Minutes are flying swiftly; and as yet
+Words:
+nothing unearthly has enticed my brain
+I would fain catch an immortal thought
+glorious gain
+laurel sprigs
+coronet
+as I would have it
+trampling down
+blank regality
+surmises
+Visuals:
+laurel
+Moods:
+
+To the Ladies Who Saw Me Crown'd
+What is there in the universal earth
+Words:
+wreath
+bay tree
+mirth
+halcyon's breast
+bear away the palm
+Visuals:
+bay
+Moods:
+
+God of the golden bow
+Words:
+where slept thine ire
+blank ideot
+wreath
+laurel
+mane
+stiffened
+Pleiades
+summer fare
+live for that honor to stoop for thee now
+Visuals:
+wreath
+laurel
+Pleiades
+Moods:
+
+This pleasant Tale is like a little Copse
+Words:
+copse
+linnet
+robins
+Visuals:
+copse
+linnet
+robin
+Moods:
+Carnal
+
+To Leigh Hunt, Esq.
+Glory and loveliness have passed away;
+Words:
+wreathed incense do we see upborn into the east
+ears of corn
+violets
+Visuals:
+corn
+Violet
+Moods:
+
+On seeing the Elgin Marbles
+My spirit is too weak - mortality
+Words:
+pinnacle and steep of godlike hardship
+feud
+billowy main
+Visuals:
+Moods:
+
+To Haydon with a Sonnet Written on Seing the Elgin Marbles
+Forgive me, Haydon, that I cannot speak
+Words:
+rolling out upfollow'd thunderings
+ample strength
+vesture's hem
+browless idiotism
+o'erweening phlegm
+Visuals:
+Moods:
+
+On a Leander which Miss Reynolds my kind friend gave me
+Come hither all sweet Maidens soberly
+Words:
+hither
+soberly
+chastened
+fringes of your eyelids white
+young Leander toiling to his death
+nigh swooning he doth purse his weary lips
+dips dead heavy
+upbubbles
+Visuals:
+Moods:
+
+On The Story of Rimini
+Who loves to peer up at the morning sun
+Words:
+peer up
+let him lowly speak these numbers
+steer
+fir-tree
+robin
+sere
+Visuals:
+fir
+robin
+
+On the Sea
+It keeps eternal whispering around
+Words:
+swell
+gluts
+vex'd and tired
+cloying melody
+brood until ye start
+quired
+Visuals:
+Moods:
+
+Unfelt unheard unseen
+Words:
+languid arms
+slumber
+nestling touch
+sleek
+true tender monitors
+dalliance
+without more ado
+blushing
+Visuals:
+Moods:
+women
+
+Hither hither love
+Words:
+hither
+mead
+cowslip
+with dew bespread
+boon
+Visuals:
+cowslip
+Moods:
+erotic
+
+You say you love; but with a voice
+Words:
+chaster
+who singeth the soft vespers to herself
+chime-bell
+ember
+your lips coral tinted
+pout for kisses
+in thy heart inurn me
+Visuals:
+Moods:
+erotic
+women
+
+Before he went to live with owls and bats,
+Words:
+naumachia
+beam
+sceptre
+straw
+old door mats
+valiant crew of loggerheads and chapmen
+sot
+drawling out
+Visuals:
+Moods:
+
+On Oxford
+The Gothic looks solemn,
+Words:
+crosier
+mouldering arch
+larch
+black tassell'd trencher
+chantry
+fat deer for parsons
+venison
+benison
+each on a leg or thigh fastens
+Visuals:
+Moods:
+
+O grant that like to Peter I
+Words:
+Dell
+Visuals:
+Moods:
+
+Think not of it, sweet one, so;
+Words:
+dirge of kisses
+Visuals:
+Moods:
+
+
+Words:
+Visuals:
+Moods:
+
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
+Moods:
+Words:
+Visuals:
 Moods:
 Words:
 Visuals:
