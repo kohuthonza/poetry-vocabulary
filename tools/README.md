@@ -66,6 +66,15 @@ Pass `--selected /tmp/ed6-selected.json` for an approved subset. If a first line
 
 Only after approved vocabulary has been written to Anki and normalized src has been verified, select sources for the approved visual subjects. Then download:
 
+For reviewed Wikimedia Commons File pages, prepare the download manifest from their current file metadata. The input is a temporary JSON array such as `[{"filename":"jk-robin-0.jpg","source":"https://commons.wikimedia.org/wiki/File:Reviewed_photo.jpg"}]`; add a reviewed `credit` to an item when Commons artist or licence metadata is incomplete. This fetches metadata and the official thumbnail URL only; it does not choose images, download image bytes or edit the image index:
+
+```sh
+python3.14 -m tools.common.commons --manifest /tmp/reviewed-commons.json \
+  --output /tmp/approved-images.json --width 1280
+```
+
+Inspect the prepared URLs and credits against the source pages, and check each source image's dimensions, before passing the result to `images batch`. The output is a new temporary file, and the helper refuses non-JPEG Commons files or missing metadata. Its requested thumbnail width does not upscale small originals; choose a better source when resolution is insufficient.
+
 ```sh
 python3.14 -m tools.common.images download \
   --filename ed-robin-0.jpg \

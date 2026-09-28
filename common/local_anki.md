@@ -53,6 +53,8 @@ The observed model is **`5 field vocabulary`**, despite containing ten fields. R
 
 Observed Visual values are basenames such as `ed-gentian`, not cloud paths or image HTML. Inspect the live template before assuming it supports that convention or image numbers beyond 0–4. Escape HTML-sensitive vocabulary content appropriately while preserving displayed wording. Preserve every existing non-empty Visual basename when reusing or enriching a note; omit Visual from unrelated field updates. Still produce and index the current approved images normally even if that note retains an earlier basename. Only populate Visual for a new note or an existing empty field with the approved resolved set. Do not create another note or overwrite old media to display the new set. An intentional difference between the current indexed set and the retained Anki basename is not a reconciliation error.
 
+For a shared vocabulary note whose card belongs to another poet, do not inspect or change its Visual field. Reuse the vocabulary note and produce the active poet's approved image set in that poet's own index and media names, leaving the set unattached to the shared note. Do not inspect or reuse other poets' visual indexes, image files or basenames. Process at most five selected Visuals per image batch and obtain the user's permission before starting the next batch, unless an explicit live instruction waives that limit.
+
 ## Local media
 
 Resolve the active profile's directory using `getMediaDirPath` or a supported MCP equivalent. On 2026-09-25 it returned `/home/ikohut/.local/share/Anki2/kohut.jan/collection.media`; verify again for future runs instead of hardcoding a profile.
