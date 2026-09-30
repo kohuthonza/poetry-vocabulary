@@ -128,3 +128,22 @@ Emily Dickinson::05 Fascicle V ->
 5,4,4 - Many cross the Rhine
 5,4,5 - In lands I never saw - they say
 5,4,6 - For each extatic instant
+
+Emily Dickinson::06 Fascicle VI ->
+6,1,1 - Who never lost, are unprepared
+6,1,2 - A Lady red - amid the Hill
+6,1,3 - To fight aloud, is very brave -
+6,1,4 - 'Houses' - so the Wise men tell me -
+6,2,1 - Bring me the sunset in a cup -
+6,2,2 - She died at play -
+6,2,3 - Cocoon above! Cocoon below!
+6,2,4 - Exultation is the going
+6,2,5 - I never hear the word "Escape"
+6,3,1 - These are the days when Birds come back -
+6,3,2 - Besides the Autumn poets sing
+6,3,3 - Safe in their Alabaster Chambers -
+6,3,4 - A poor - torn heart - a tattered heart -
+6,4,1 - I bring an unaccustomed wine
+6,4,2 - As children bid the Guest "Good night"
+6,4,3 - Going to Heaven!
+6,4,4 - Our lives are Swiss -

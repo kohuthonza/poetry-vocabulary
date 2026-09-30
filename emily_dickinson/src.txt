@@ -1262,7 +1262,7 @@ SD
 6,1,3 - To fight aloud, is very brave -
 Words:
 gallanter
-cavalry of Wo
+cavalry of wo
 plumed procession
 Visuals:
 Moods:
@@ -1285,10 +1285,10 @@ robin
 astonished boughs
 debauchee of dews
 piers
-who leads the docile spheres by whites of supple blue
+who leads the docile spheres by withes of supple blue
 string the stalactite
 wampum
-alban house
+Alban house
 gala day
 implements
 pomposity
@@ -1317,7 +1317,7 @@ Words:
 perched in extasy
 chrysalis
 receding grass
-iterrogate
+interrogate
 surrogate
 Visuals:
 Moods:
@@ -1349,7 +1349,7 @@ SD
 6,3,1 - These are the days when Birds come back -
 Words:
 sophistries
-almost thy plausibility induce my brlief
+almost thy plausibility induces my belief
 ranks of seeds
 timid
 sacrament

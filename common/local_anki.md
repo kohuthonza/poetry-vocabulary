@@ -6,6 +6,8 @@ Use this guide with [update_src.md](update_src.md). Anki Desktop must be running
 
 Use **Codex → Anki MCP → AnkiConnect → Anki Desktop** with full read/write access. Prefer MCP; the user explicitly authorizes **direct AnkiConnect whenever an operation is unavailable through MCP or direct access is more convenient**. MCP is a convenience, not a restriction; do not ask again for this general permission or impose a read-only mode. Environment network/filesystem approvals still apply. Do not manipulate the live collection database directly or silently switch to desktop automation.
 
+The user also gives standing authorization to connect to Anki and run Python deck-processing commands. Do not ask for conversational permission for those routine operations.
+
 The persistent installation is `@ankimcp/anki-mcp-server@0.25.1`, under `/home/ikohut/.local/lib/node_modules`, with executable `/home/ikohut/.local/bin/ankimcp`. It does not depend on an npx cache. Existing configuration:
 
 ```toml
@@ -53,7 +55,7 @@ The observed model is **`5 field vocabulary`**, despite containing ten fields. R
 
 Observed Visual values are basenames such as `ed-gentian`, not cloud paths or image HTML. Inspect the live template before assuming it supports that convention or image numbers beyond 0–4. Escape HTML-sensitive vocabulary content appropriately while preserving displayed wording. Preserve every existing non-empty Visual basename when reusing or enriching a note; omit Visual from unrelated field updates. Still produce and index the current approved images normally even if that note retains an earlier basename. Only populate Visual for a new note or an existing empty field with the approved resolved set. Do not create another note or overwrite old media to display the new set. An intentional difference between the current indexed set and the retained Anki basename is not a reconciliation error.
 
-For a shared vocabulary note whose card belongs to another poet, do not inspect or change its Visual field. Reuse the vocabulary note and produce the active poet's approved image set in that poet's own index and media names, leaving the set unattached to the shared note. Do not inspect or reuse other poets' visual indexes, image files or basenames. Process at most five selected Visuals per image batch and obtain the user's permission before starting the next batch, unless an explicit live instruction waives that limit.
+For a shared vocabulary note whose card belongs to another poet, do not inspect or change its Visual field. Reuse the vocabulary note and produce the active poet's approved image set in that poet's own index and media names, leaving the set unattached to the shared note. Do not inspect or reuse other poets' visual indexes, image files or basenames. Count only Visuals needing new image sets toward the five-set image-batch limit. Resolved sets are reuses and consume no batch slot; request permission for another batch only when more new sets remain, unless an explicit live instruction waives that limit.
 
 ## Local media
 
