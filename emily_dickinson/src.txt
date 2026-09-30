@@ -1226,65 +1226,227 @@ coffers heaped with tears
 Visuals:
 Moods:
 
+6,1,1 - Who never lost, are unprepared
 Words:
+coronet
+flagons
+tamarind
 Visuals:
+coronet
+tamarind
 Moods:
+contrarian
+philosophical
+Sent:
+SD (beggining "Who never lost, is unprepared")
+
+6,1,2 - A Lady red - amid the Hill
 Words:
+amid
+placid
+lily
+tidy breezes
+prithee
+buttercup
+nonchalant
+hedge
+Visuals:
+lily
+buttercup
+Moods:
+jolly
+spring
+Sent:
+SD
+
+6,1,3 - To fight aloud, is very brave -
+Words:
+gallanter
+cavalry of Wo
+plumed procession
 Visuals:
 Moods:
 
+6,1,4 - 'Houses' - so the Wise men tell me -
 Words:
+snugly
+trudge
 Visuals:
 Moods:
+critique
+
+6,2,1 - Bring me the sunset in a cup -
 Words:
+reckon
+flagons
+weaver
+breadths of blue
+robin
+astonished boughs
+debauchee of dews
+piers
+who leads the docile spheres by whites of supple blue
+string the stalactite
+wampum
+alban house
+gala day
+implements
+pomposity
+Visuals:
+robin
+alban house
+Moods:
+philosophical
+
+6,2,2 - She died at play -
+Words:
+gambolled away her lease of spotted hours
+strolled softly
+vestments
+fleece
+spray
+Visuals:
+Moods:
+death
+philosophical
+Sent:
+SD
+
+6,2,3 - Cocoon above! Cocoon below!
+Words:
+perched in extasy
+chrysalis
+receding grass
+iterrogate
+surrogate
+Visuals:
+Moods:
+jolly
+
+6,2,4 - Exultation is the going
+Words:
+exultation
+headlands
+Visuals:
+Moods:
+contrarian
+philosophical
+Sent:
+SD
+
+6,2,5 - I never hear the word "Escape"
+Words:
+prisons broad
+battered down
+tug
+Visuals:
+Moods:
+philosophical
+transcendental
+Sent:
+SD
+
+6,3,1 - These are the days when Birds come back -
+Words:
+sophistries
+almost thy plausibility induce my brlief
+ranks of seeds
+timid
+sacrament
+communion in the haze
+emblems
+partake
+consecrated
+Visuals:
+Moods:
+autumn
+contrarian
+Sent:
+SD
+
+6,3,2 - Besides the Autumn poets sing
+Words:
+prosaic days
+incisive
+ascetic eves
+golden rod
+sheaves
+bustle in the brook
+spicy valves
+mesmeric fingers
+Visuals:
+Moods:
+autumn
+Sent:
+SD
+
+6,3,3 - Safe in their Alabaster Chambers -
+Words:
+alabaster chambers
+rafter of satin
+stolid ear
+cadence
+sagacity
+Visuals:
+Moods:
+autumn
+Sent:
+SD
+THW
+
+6,3,4 - A poor - torn heart - a tattered heart -
+Words:
+tattered heart
+ebbing day
+latitudes
+espied
+gales
+Visuals:
+Moods:
+devotional
+Sent:
+SD (with two pictures cut from her father's copy of Charles Dicken's Old Curiosity Shop tied to the page)
+
+6,4,1 - I bring an unaccustomed wine
+Words:
+unaccustomed
+parching
+essay
+brimming eyes
+tardy glass
+superfluous
+bosoms
+mould
+some other thirsty there may be to whom this w'd have pointed me had it remained to speak
+slake
 Visuals:
 Moods:
 
+6,4,2 - As children bid the Guest "Good night"
 Words:
-Visuals:
-Moods:
-Words:
-Visuals:
-Moods:
-
-Words:
-Visuals:
-Moods:
-Words:
+reluctant
+caper
+cribs
+prance
 Visuals:
 Moods:
 
+6,4,3 - Going to Heaven!
 Words:
+astonished
 Visuals:
 Moods:
-Words:
-Visuals:
-Moods:
+Sent:
+SD
 
+6,4,4 - Our lives are Swiss -
 Words:
+intervene
 Visuals:
 Moods:
-Words:
-Visuals:
-Moods:
+Sent:
+SD
 
-Words:
-Visuals:
-Moods:
-Words:
-Visuals:
-Moods:
-
-Words:
-Visuals:
-Moods:
-Words:
-Visuals:
-Moods:
-
-Words:
-Visuals:
-Moods:
 Words:
 Visuals:
 Moods:
